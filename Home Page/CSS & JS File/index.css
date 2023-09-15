@@ -1,0 +1,20 @@
+.color-axiom{
+    color: #004080;
+}
+.bg-axiom{
+    background-color:  #004080;
+    
+}
+
+/* navbar sidebar css  */
+.hovern:hover {
+        background-color: #004080;
+       
+        color: #fcfcfc;
+        text-align: center;
+      }
+.hovern.active {
+    background-color: #004080;
+    color: #fff;
+    text-align: center;
+}

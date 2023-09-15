@@ -1,0 +1,797 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.0/dist/chart.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/439a542074.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="Technology1.css">
+
+    <title>Final page </title>
+
+    <style>
+    
+      .hovern:hover {
+        background-color: #004080;
+       
+        color: #fcfcfc;
+        text-align: center;
+      }
+      .hovern.active {
+    background-color: #004080;
+    color: #fff;
+    text-align: center;
+}
+
+    </style>
+</head>
+<body>
+    <div class="header">
+        <nav class="navbar position-fixed w-100 z-1" style="background-color: #004080;;">
+            <div class="container-fluid mx-2">
+              <button class="navbar-toggler me-5" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+                    aria-controls="offcanvasNavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button> 
+                <a href="#">
+                    <i class="fa-solid fa-bell  float-end" style="color: #fcfcfc;"></i>
+                </a>  
+            </div>
+        </nav>
+    </div>
+
+    <!-- sidebar of VIP -->
+<div class="container-fluid">
+    <div class="row flex-nowrap">
+        <div class="col-2 col-sm-3 col-md-3 shadow-lg  position-fixed  top-0 start-0 col-lg-2 px-sm-1  bg-light" >
+                <div class="d-flex flex-column mx-auto  align-items-sm-center  pt-2 text-dark min-vh-100">
+                    <!-- VIP Logo -->
+                    <a href="#" data-bs-toggle="collapse" class="nav-link px-0  align-middle mt-3 ">
+                        <img src="./Axiom VIP Images/logo.png" class="mt-5 img-fluid" alt="Axiom VIP" width="80" height="50"></a>
+                    <!-- User Section -->
+                    <div class="mt-3">
+                        <img src="https://github.com/mdo.png" alt="Profile" width="50" height="50" class="rounded-circle  mx-sm-5">
+                        <a href="#" class="d-flex align-items-center text-primary text-decoration-none dropdown dropdown-toggle justify-content-center text-center my-3" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
+                            <span class="d-none d-sm-inline">It's SK </span>
+                        </a>
+                        <hr style="color: #004080;">
+                        <!-- Dropdown for Profile Options -->
+                        <ul class="dropdown-menu dropdown-menu-light text-small  shadow">
+                            <li class="hovern" style="padding-left: 3px; padding-right: 3px;"><a style="color: #004080;" class="dropdown-item " href="#"> <i class="fa-solid fa-street-view"></i> View Profile</a></li>
+                            <li >
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li class="hovern" style="padding-left: 3px; padding-right: 3px;"><a style="color: #004080;" class="dropdown-item" href="#"> <i class="fa-solid fa-user-pen"></i> Edit Profile</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li class="hovern" style="padding-left: 3px; padding-right: 3px;"><a style="color: #004080;" class="dropdown-item" href="#"> <i class="fa-solid fa-right-from-bracket fa-rotate-180"></i> Log Out</a></li>
+                        </ul>
+                    </div>
+                
+                <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start" id="menu">
+                    <li class="nav-item  rounded-2 my-1 shadow-sm">
+                        <a href="#" class="nav-link hovern align-middle hovern" >
+                                <i class="fa-solid fa-house-chimney"></i> <span class="ms-1 d-none d-sm-inline">Home</span>
+                        </a>
+                    </li>
+                    <li class="w-100 rounded-2 my-1 shadow-sm">
+                        <a href="#submenu1" data-bs-toggle="collapse" class="nav-link hovern align-middle">
+                            <i class="fa-solid fa-magnifying-glass-chart"></i> <span class="ms-1  d-none d-sm-inline">Analyze</span> </a>
+                        <ul class="collapse flex-column ms-1 list-unstyled" id="submenu1" data-bs-parent="#menu">
+                            <li class="w-100  rounded-2 my-1 shadow-sm">
+                                <a href="#" class="nav-link  hovern px-0 hovern"> <i class="fa-solid fa-bars-progress hovern"></i> <span class="d-none d-sm-inline">Progress Report</span></a>
+                            </li>
+                            <li class="w-100  rounded-2 my-1 shadow-sm">
+                                <a href="#" class="nav-link hovern px-0 hovern"> <i class="fa-solid fa-flag hovern"></i> <span class="d-none d-sm-inline">Session Report</span></a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="w-100  rounded-2 my-1 shadow-sm">
+                        <a href="#submenu2" data-bs-toggle="collapse" class="nav-link  hovern hovern align-middle ">
+                            <i class="fa-solid fa-table"></i> <span class="ms-1 d-none d-sm-inline">Technology</span></a>
+                        <ul class="collapse flex-column ms-1  list-unstyled" id="submenu2" data-bs-parent="#menu" style="max-height: 120px; overflow-y: scroll;">
+                            <li class="w-100  rounded-2 my-1 shadow-sm">
+                                <a href="#" class="nav-link hovern  px-0 hovern"> <span class="d-none hovern w-100 d-sm-inline">C</span></a>
+                            </li>
+                            <li  class="w-100  rounded-2 my-1 shadow-sm">
+                                <a href="#" class="nav-link px-0 hovern hovern"> <span class="d-none d-sm-inline">C++</span></a>
+                            </li>
+                            <li class="w-100  rounded-2 my-1 shadow-sm">
+                                <a href="#" class="nav-link px-0 hovern"> <span class="d-none d-sm-inline">HTML</span></a>
+                            </li>
+                            <li  class="w-100  rounded-2 my-1 shadow-sm">
+                                <a href="#" class="nav-link px-0 hovern"> <span class="d-none d-sm-inline">CSS</span></a>
+                            </li>
+                            <li  class="w-100  rounded-2 my-1 shadow-sm">
+                                <a href="#" class="nav-link px-0 hovern"> <span class="d-none d-sm-inline">C++</span></a>
+                            </li>
+                            <li>
+                                <a href="#" class="nav-link px-0 hovern"> <span class="d-none d-sm-inline">HTML</span></a>
+                            </li>
+                            <li  class="w-100  rounded-2 my-1 shadow-sm">
+                                <a href="#" class="nav-link px-0 hovern"> <span class="d-none d-sm-inline">CSS</span></a>
+                            </li>
+                            <li>
+                                <a href="#" class="nav-link px-0 hovern"> <span class="d-none d-sm-inline">C++</span></a>
+                            </li>
+                            <li>
+                                <a href="#" class="nav-link px-0 hovern"> <span class="d-none d-sm-inline">HTML</span></a>
+                            </li>
+                            <li>
+                                <a href="#" class="nav-link px-0 hovern"> <span class="d-none d-sm-inline">CSS</span></a>
+                            </li>
+                            <li>
+                                <a href="#" class="nav-link px-0 hovern"> <span class="d-none d-sm-inline">C++</span></a>
+                            </li>
+                            <li>
+                                <a href="#" class="nav-link px-0 hovern"> <span class="d-none d-sm-inline">HTML</span></a>
+                            </li>
+                            <li>
+                                <a href="#" class="nav-link px-0 hovern"> <span class="d-none d-sm-inline">CSS</span></a>
+                            </li>
+                            <li>
+                                <a href="#" class="nav-link px-0 hovern"> <span class="d-none d-sm-inline">C++</span></a>
+                            </li>
+                            <li>
+                                <a href="#" class="nav-link px-0 hovern"> <span class="d-none d-sm-inline">HTML</span></a>
+                            </li>
+                            <li>
+                                <a href="#" class="nav-link px-0 hovern"> <span class="d-none d-sm-inline">CSS</span></a>
+                            </li>
+                            <li>
+                                <a href="#" class="nav-link px-0 hovern"> <span class="d-none d-sm-inline">C++</span></a>
+                            </li>
+                            <li>
+                                <a href="#" class="nav-link px-0 hovern"> <span class="d-none d-sm-inline">HTML</span></a>
+                            </li>
+                            <li>
+                                <a href="#" class="nav-link px-0 hovern"> <span class="d-none d-sm-inline">CSS</span></a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li  class="w-100  rounded-2 my-1 shadow-sm">
+                        <a href="#submenu3" data-bs-toggle="collapse" class=" nav-link  hovern align-middle">
+                            <i class="fa-solid fa-bookmark"></i> <span class="ms-1 d-none d-sm-inline">Acitvity</span> </a>
+                            <ul class="collapse flex-column ms-1 list-unstyled" id="submenu3" data-bs-parent="#menu">
+                            <li class="w-100  rounded-2 my-1 shadow-sm">
+                                <a href="#" class="nav-link px-0 hovern"> <i class="fa-solid fa-calendar-days"></i> <span class="d-none d-sm-inline">Calender</span></a>
+                            </li>
+                            <li  class="w-100  rounded-2 my-1 shadow-sm">
+                                <a href="#" class="nav-link px-0 hovern"> <i class="fa-solid fa-hand-sparkles"></i> <span class="d-none d-sm-inline">Events</span></a>
+                            </li>
+                            <li  class="w-100  rounded-2 my-1 shadow-sm">
+                                <a href="#" class="nav-link px-0 hovern"> <i class="fa-solid fa-file-lines"></i> <span class="d-none d-sm-inline">Skill Test</span></a>
+                            </li>
+                        </ul>
+                    </li>
+                <hr>
+                <li class="nav-item  rounded-2 my-1 shadow-sm w-100">
+                    <a href="#" class="nav-link align-middle hovern ">
+                        <i class="fa-solid fa-right-from-bracket fa-rotate-180"></i> <span class="ms-1 d-none d-sm-inline">Log Out</span>
+                    </a>
+                </li>
+                
+                </div>
+        </div>
+
+        <!-- content of right side data -->
+        <div class="col-10 col-md-9  col-sm-9  ms-sm-auto  col-lg-10  px-md-4 py-3" style="margin-left: 70px;">
+            
+                <div class="container-fluid">
+                    <!--main container div start-->
+    
+                    <div class="row mt-5 p-0">
+                        <!--row start-->
+                              
+                        <!-- div video Start -->
+                        <div class="col-xl-8 col-lg-12 col-md-12 col-sm-12 col-xs-12 m-0 mt-3 p-0">
+                    <h4 style="color: #004080;" class="fw-semibold  mt-3">Structured Oriented Programming Using C</h4>
+                            
+                            <video class="img-fluid" width="900" height="540" controls>
+                                <source src="../Axiom VIP Images/session_v_t1_tp1_st1_1.mp4" type="video/mp4">
+    
+                            </video>
+                        </div>
+                        <!--div video end-->
+    
+                        <!-- div main button Start-->
+                        <div class="col-xl-4 col-lg-8 col-md-10 col-sm-12 col-xs-12 rounded-3 mt-3 ">
+    
+                            <h4 class="text-center mt-3" style="color: #004080;  font-family: 'Inria Sans', sans-serif;font-weight: bold;">
+                                Sessions
+                            </h4>
+    
+                            <!-- Dropdown button 1 -->
+                            <div style="overflow-y:scroll;height:300px;"> <!-- Dropdown button 1 -->
+                                <div class="my-1 w-100" >
+                
+                                   type="button" class="dropdown-toggle dropdown-toggle-split"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    <span class=" float-start"><span class="me-2" >1.</span>Basic</span>
+                                                </button>
+                                                <ul class="dropdown-menu  rounded-4 " style="background-color: #004080;width: 280px; ">
+                                                    <li style="background-color: #004080;" class="p-1 text-center"><a
+                                                        class="text-decoration-none text-white fw-bold"
+                                                        href="http://127.0.0.1:5500/Axiom%20VIP%20Images/Technology1.html#">Basic Programming
+                                                            And Practice</a></li>
+                                                            
+                                                        </ul>
+                                                    </div>
+                                <!-- Dropdown button 2 -->
+                                <!-- dropdown 2  button div start  -->
+    
+                                <div class="my-1 w-100 ">
+                                    <div class="">
+                                        <button
+                                            class="bg-white fw-bold fs-5  ms-xl-5 ms-sm-0 ms-lg-5 ms-md-5   p-2 border border-1 shadow-sm  rounded-4 w-75 m-0 p-0 session"
+                                            style="color: #004080 ;" type="button"
+                                            class=" dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown"
+                                            aria-expanded="false">
+                                            <span class=" float-start "><a style="text-decoration: none;color: #004080;"
+                                                    href="#"><span class="me-2 ">2.</span>Datatypes in C</span></a>
+                                        </button>
+                                        <ul class="dropdown-menu  rounded-4 w-25" style="background-color: #004080;width:280px;">
+                                            <li style="background-color: #004080;" class="p-1 text-center"><a
+                                                    class="text-decoration-none fw-bold text-center text-white"
+                                                    href="http://127.0.0.1:5500/Axiom%20VIP%20Images/Technology1.html#">Datatypes</a>
+                                            </li>
+    
+                                        </ul>
+                                    </div>
+                                </div>
+                                <!-- dropdown 2 button div end  -->
+    
+                                <!-- Dropdown button 3 -->
+                                <div class="my-1">
+                                    <!-- <div class="col-lg-12 col-md-12 col-sm-12"> -->
+                                    <button
+                                        class="fw-bold fs-5  ms-xl-5 ms-sm-0 ms-lg-5 ms-md-5 bg-white p-2 border border-1 shadow-sm  rounded-4 w-75 m-0 p-0"
+                                        style="background-color: #004080 ;" type="button"
+                                        class="dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown"
+                                        aria-expanded="false">
+                                        <span class=" float-start"><a style="color: #004080;text-decoration: none;"
+                                                href="#"><span class="me-2">3.</span>Operators in C</span></a>
+                                    </button>
+                                    <ul class="dropdown-menu  rounded-4 w-25" style="background-color: #004080;">
+                                        <li style="background-color: #004080;" class="p-1 text-center"><a
+                                                class="text-decoration-none fw-bold text-center text-white"
+                                                href="http://127.0.0.1:5500/Axiom%20VIP%20Images/Technology1.html#">Operators</a>
+                                        </li>
+    
+                                    </ul>
+                                    <!-- </div> -->
+                                </div>
+                                <!-- Dropdown button 3 end -->
+    
+    
+    
+                                <!-- Dropdown button 4 -->
+                                <div class="my-1">
+                                    <!-- <div class="col-lg-12 col-md-12 col-sm-12 "> -->
+                                    <button class="fw-bold fs-5 ms-xl-5 ms-sm-0 ms-lg-5 ms-md-5 pe-5 bg-white pt-1 pb-1 border border-1 shadow-sm  rounded-4 w-75
+                             m-0 p-0" style="background-color: #004080 ;" type="button"
+                                        class="dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown"
+                                        aria-expanded="false">
+                                        <span class=" float-start"><a style="color: #004080;text-decoration: none;"
+                                                href="#"><span class="">&nbsp;4.</span>&nbsp;&nbsp;Conditional &nbsp;&&nbsp;
+                                                Branching in C</span></a>
+                                    </button>
+                                    <ul class="dropdown-menu  rounded-4 w-25 text-center"
+                                        style="background-color: #004080;">
+                                        <li style="background-color: #004080;" class="p-1 text-center"><a
+                                                class=" text-decoration-none  fw-bold  text-white"
+                                                href="http://127.0.0.1:5500/Axiom%20VIP%20Images/Technology1.html#">Conditional
+                                                &
+                                                Branching</a></li>
+    
+                                    </ul>
+                                    <!-- </div> -->
+                                </div>
+    
+                                <!-- Dropdown button 4 end -->
+    
+    
+    
+    
+    
+    
+                                <!-- Dropdown button 5 -->
+                                <div class="my-1">
+                                    <div class="col-lg-12 col-md-12 col-sm-12">
+                                        <button
+                                            class=" bg-white  fw-bold fs-5 ms-xl-5 ms-sm-0 ms-lg-5 ms-md-5  p-2 border border-1 shadow-sm  rounded-4 w-75 m-0 p-0"
+                                            type="button" class="dropdown-toggle dropdown-toggle-split"
+                                            data-bs-toggle="dropdown" aria-expanded="false">
+                                            <span class=" float-start"><a style="color: #004080;text-decoration: none;"
+                                                    href="#"><span class="me-2">5.</span>Looping in C</span></a>
+                                        </button>
+                                        <ul class="dropdown-menu  rounded-4 w-25" style="background-color: #004080;">
+                                            <li style="background-color: #004080;" class="p-1 text-center"><a
+                                                    class="text-decoration-none  fw-bold text-center text-white"
+                                                    href="http://127.0.0.1:5500/Axiom%20VIP%20Images/Technology1.html#">Looping
+                                                </a></li>
+                                            <hr class="text-black border border-1 ">
+                                            <li style="background-color: #004080;" class="p-1 text-center"><a
+                                                    class=" text-decoration-none fw-bold  text-white"
+                                                    href="http://127.0.0.1:5500/Axiom%20VIP%20Images/Technology1.html#">Looping
+                                                    Techniques
+                                                </a></li>
+                                            <hr class="text-black border border-1 ">
+                                            <li style="background-color: #004080;" class="p-1 text-center"><a
+                                                    class=" text-decoration-none fw-bold  text-white"
+                                                    href="http://127.0.0.1:5500/Axiom%20VIP%20Images/Technology1.html#">Nested
+                                                    Looping
+                                                </a></li>
+    
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="my-1">
+                                    <div class="col-lg-12 col-md-12 col-sm-12">
+                                        <button
+                                            class="fw-bold fs-5 ms-xl-5 ms-sm-0 ms-lg-5 ms-md-5 bg-white p-2 border border-1 shadow-sm  rounded-4 w-75 m-0 p-0"
+                                            style="background-color: #004080 ;" type="button"
+                                            class="dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown"
+                                            aria-expanded="false">
+                                            <span class=" float-start"><a style="color: #004080;text-decoration: none;"
+                                                    href="#"><span class="me-2">6.</span>Storage Classes</span></a>
+                                        </button>
+                                        <ul class="dropdown-menu  rounded-4 w-25" style="background-color: #004080;">
+                                            <li style="background-color: #004080;" class="p-1 text-center"><a
+                                                    class="text-decoration-none  fw-bold text-center text-white"
+                                                    href="http://127.0.0.1:5500/Axiom%20VIP%20Images/Technology1.html#">Storage
+                                                    Classes
+                                                </a></li>
+    
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="my-1">
+                                    <div class="col-lg-12 col-md-12 col-sm-12">
+                                        <button
+                                            class="fw-bold fs-5 ms-xl-5 ms-sm-0 ms-lg-5 ms-md-5 bg-white p-2 border border-1 shadow-sm  rounded-4 w-75 m-0 p-0"
+                                            style="background-color: #004080 ;" type="button"
+                                            class="dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown"
+                                            aria-expanded="false">
+                                            <span class=" float-start"><a style="color: #004080;text-decoration: none;"
+                                                    href="#"><span class="me-2">7.</span>Function</span></a>
+                                        </button>
+                                        <ul class="dropdown-menu  rounded-4 w-25" style="background-color: #004080;">
+                                            <li style="background-color: #004080;" class="p-1 text-center"><a
+                                                    class="text-decoration-none fw-bold text-center text-white"
+                                                    href="http://127.0.0.1:5500/Axiom%20VIP%20Images/Technology1.html#">
+                                                    Nested Function
+                                                </a></li>
+    
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="my-1">
+                                    <div class="col-lg-12 col-md-12 col-sm-12">
+                                        <button
+                                            class="fw-bold fs-5 ms-xl-5 ms-sm-0 ms-lg-5 ms-md-5 bg-white p-2 border border-1 shadow-sm  rounded-4 w-75 m-0 p-0"
+                                            style="background-color: #004080 ;" type="button"
+                                            class="dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown"
+                                            aria-expanded="false">
+                                            <span class=" float-start"><a style="color: #004080;text-decoration: none;"
+                                                    href="#"><span class="me-2">8.</span>Recursion </span></a>
+                                        </button>
+                                        <ul class="dropdown-menu  rounded-4 w-25" style="background-color: #004080;">
+                                            <li style="background-color: #004080;" class="p-1 text-center"><a
+                                                    class=" text-decoration-none fw-bold text-center text-white"
+                                                    href="http://127.0.0.1:5500/Axiom%20VIP%20Images/Technology1.html#">Recursion
+                                                </a></li>
+    
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="my-1">
+                                    <div class="col-lg-12 col-md-12 col-sm-12">
+                                        <button
+                                            class="fw-bold fs-5 ms-xl-5 ms-sm-0 ms-lg-5 ms-md-5 bg-white p-2 border border-1 shadow-sm  rounded-4 w-75 m-0 p-0"
+                                            style="background-color: #004080 ;" type="button"
+                                            class="dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown"
+                                            aria-expanded="false">
+                                            <span class=" float-start"><a style="color: #004080;text-decoration: none;"
+                                                    href="#"><span class="me-2">9.</span>String Manipulation</span></a>
+                                        </button>
+                                        <ul class="dropdown-menu  rounded-4 w-25" style="background-color: #004080;">
+                                            <li style="background-color: #004080;" class="p-1 text-center"><a
+                                                    class=" text-decoration-none fw-bold  text-white"
+                                                    href="http://127.0.0.1:5500/Axiom%20VIP%20Images/Technology1.html#">String
+                                                    Manipulation
+                                                </a></li>
+    
+    
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="my-1">
+                                    <div class="col-lg-12 col-md-12 col-sm-12">
+                                        <button
+                                            class="fw-bold fs-5 ms-xl-5 ms-sm-0 ms-lg-5 ms-md-5 bg-white p-2 border border-1 shadow-sm  rounded-4 w-75 m-0 p-0"
+                                            style="background-color: #004080 ;" type="button"
+                                            class="dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown"
+                                            aria-expanded="false">
+                                            <span class=" float-start"><a style="color: #004080;text-decoration: none;"
+                                                    href="#"><span class="me-2">10.</span>Array</span></a>
+                                        </button>
+                                        <ul class="dropdown-menu  rounded-4 w-25" style="background-color: #004080;">
+                                            <li style="background-color: #004080;color: white;" class="p-1 text-center"><a
+                                                    class="text-white text-decoration-none  fw-bold  "
+                                                    href="http://127.0.0.1:5500/Axiom%20VIP%20Images/Technology1.html#">Array
+                                                    1D, 2D and Multi D
+                                                </a></li>
+                                            <hr class="text-white border border-2">
+                                            <li style="background-color: #004080;color: white;" class="p-1 text-center"><a
+                                                    class="text-white text-decoration-none  fw-bold  "
+                                                    href="http://127.0.0.1:5500/Axiom%20VIP%20Images/Technology1.html#">Array
+                                                    Matrix
+                                                </a></li>
+    
+                                        </ul>
+                                        <ul class="dropdown-menu  rounded-4 w-25" style="background-color: #004080;">
+                                            <li style="background-color: #004080;color: white;" class="p-1 text-center"><a
+                                                    class="text-white text-decoration-none  fw-bold  "
+                                                    href="http://127.0.0.1:5500/Axiom%20VIP%20Images/Technology1.html#">Array
+                                                    1D, 2D and Multi D
+                                                </a></li>
+                                            <hr class="text-white border border-2">
+                                            <li style="background-color: #004080;color: white;" class="p-1 text-center"><a
+                                                    class="text-white text-decoration-none  fw-bold  "
+                                                    href="http://127.0.0.1:5500/Axiom%20VIP%20Images/Technology1.html#">Array
+                                                    Matrix
+                                                </a></li>
+    
+                                        </ul>
+                                        <ul class="dropdown-menu  rounded-4 w-25" style="background-color: #004080;">
+                                            <li style="background-color: #004080;color: white;" class="p-1 text-center"><a
+                                                    class="text-white text-decoration-none  fw-bold  "
+                                                    href="http://127.0.0.1:5500/Axiom%20VIP%20Images/Technology1.html#">Array
+                                                    1D, 2D and Multi D
+                                                </a></li>
+                                            <hr class="text-white border border-2">
+                                            <li style="background-color: #004080;color: white;" class="p-1 text-center"><a
+                                                    class="text-white text-decoration-none  fw-bold  "
+                                                    href="http://127.0.0.1:5500/Axiom%20VIP%20Images/Technology1.html#">Array
+                                                    Matrix
+                                                </a></li>
+    
+                                        </ul>
+                                        <ul class="dropdown-menu  rounded-4 w-25" style="background-color: #004080;">
+                                            <li style="background-color: #004080;color: white;" class="p-1 text-center"><a
+                                                    class="text-white text-decoration-none  fw-bold  "
+                                                    href="http://127.0.0.1:5500/Axiom%20VIP%20Images/Technology1.html#">Array
+                                                    1D, 2D and Multi D
+                                                </a></li>
+                                            <hr class="text-white border border-2">
+                                            <li style="background-color: #004080;color: white;" class="p-1 text-center"><a
+                                                    class="text-white text-decoration-none  fw-bold  "
+                                                    href="http://127.0.0.1:5500/Axiom%20VIP%20Images/Technology1.html#">Array
+                                                    Matrix
+                                                </a></li>
+    
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+    
+                            <!-- Dropdown button 5 end -->
+    
+    
+    
+    
+                            <!--div main button End -->
+                        </div>
+    
+    
+                        <!--row Div-->
+                    </div>
+                    <!--row End-->
+    
+                    <div class="row m-0 p-0">
+                        <div class="col-xl-7 col-lg-7 col-md-10  col-sm-6 col-6 ms-5  d-xl-flex mt-3      ">
+                            <div>
+                           <button class="democode btn py-1 px-4 fw-bold  " id="not" onclick="toggleButtons(this, this.nextElementSibling)">Notes</button><br>
+                           <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal2" id="note" class=" btn mt-3 pt-1 pb-1  abtn text-decoration-none  ">1.&nbsp;Notes&ensp;<a> <i class="fa-solid fa-eye" style="color: #ffffff;"></i></a></button>       
+                           <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal3"   id="present" class=" btn mt-3 pt1 pb-1  abtn fw-bold "  >2.&nbsp;Presentation&ensp;<i class="fa-solid fa-eye" style="color: #ffffff;"></i></button>       
+                        </div>
+                        <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog modal-xl modal-dialog-scrollable">
+                              <div class="modal-content">
+                        
+                                <div class="modal-header">
+                                  <h1 class="modal-title fs-5" id="exampleModalLabel">Basic Of C Programming</h1>
+                                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body" style="height: 700px;">
+                                    <iframe class="img-fluid text-center h-100 w-100" src="./Axiom VIP Images/basic notes.pdf"   frameborder="0">
+                        
+                                    </iframe>
+                                </div>
+                                
+                              </div>
+                            </div>
+                          </div>
+    
+                          <div class="modal fade" id="exampleModal3" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog modal-fullscreen modal-dialog-scrollable">
+                              <div class="modal-content">
+                        
+                                <div class="modal-header">
+                                  <h1 class="modal-title fs-5" id="exampleModalLabel">Basic Of C Programming</h1>
+                                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body" style="height: 700px;">
+                                    <iframe class="img-fluid text-center h-100 w-100" src="./Axiom VIP Images/basic notes.pdf"   frameborder="0">
+                        
+                                    </iframe>
+                                </div>
+                                
+                              </div>
+                            </div>
+                          </div>
+                        <!-- </div>
+            
+                        <div class="col col-lg-2 col-md-2 col-sm-8 border "> -->
+                            <div>
+                                <button class="democode btn py-1 px-4  fw-bold   " id="dem" onclick="toggleButtons(this, this.nextElementSibling)">Demo&nbsp;codes</button><br>
+                               <button  id="demo1" data-bs-target="#exampleModal237" data-bs-toggle="modal" class=" btn mt-3 pt-1 pb-1  abtn fw-bold "  >1.&ensp;Demo&nbsp;codes &emsp;<a > <i class="fa-solid fa-eye" style="color: #ffffff;"></i></a></button>       
+                               <button  id="demo2" data-bs-target="#exampleModal236" data-bs-toggle="modal" class=" btn mt-3 pt1 pb-1 abtn fw-bold "  >1.&ensp;Demo&nbsp;codes  &emsp;<i class="fa-solid  fa-eye" style="color: #ffffff;"></i></button>       
+                            </div>
+
+
+
+
+
+
+
+                            <div class="modal fade" id="exampleModal236" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog modal-dialog modal-xl modal-dialog-scrollable">
+                                  <div class="modal-content">
+                            
+                                    <div class="modal-header">
+                                      <h1 class="modal-title fs-5" id="exampleModalLabel">Basic Of C Programming</h1>
+                                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body" style="height: 700px;">
+                                        <iframe class="img-fluid text-center h-100 w-100" src="./Axiom VIP Images/ibill.c"   frameborder="0">
+                            
+                                        </iframe>
+                                    </div>
+                                    
+                                  </div>
+                                </div>
+                              </div>
+        
+                              <div class="modal fade" id="exampleModal237" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog modal-dialog modal-xl modal-dialog-scrollable">
+                                  <div class="modal-content">
+                            
+                                    <div class="modal-header">
+                                      <h1 class="modal-title fs-5" id="exampleModalLabel">Basic Of C Programming</h1>
+                                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body" style="height: 700px;">
+                                        <iframe class="img-fluid text-center h-100 w-100" src="./Axiom VIP Images/basic demo code 2.C"   frameborder="0">
+                            
+                                        </iframe>
+                                    </div>
+                                    
+                                  </div>
+                                </div>
+                              </div>
+
+
+
+
+
+
+
+                           
+                                <div>                    <button class=" btn py-1 px-4 democode fw-bold" id="assi" onclick="toggleButtons(this, this.nextElementSibling)">Assignments</button><br>
+                                      <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal"  id="assi1" class=" btn mt-3 pt-1 pb-1  abtn fw-bold "  >1.&ensp;Assignment &emsp;<i class="fa-solid fa-eye" style="color: #ffffff;"></i></button>       
+                                      <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" id="assi2" class=" btn mt-3 pt1 pb-1  abtn fw-bold " data-bs-toggle="modal" data-bs-target="#exampleModal1" >2.&ensp;Assignment  &emsp;<i class="fa-solid fa-eye" style="color: #ffffff;"></i></button>
+                   <!-- Modal --></div>
+      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog modal-xl modal-dialog-scrollable">
+          <div class="modal-content">
+    
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="exampleModalLabel">Basic Of C Programming</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body" style="height: 700px;">
+                <iframe class="img-fluid text-center h-100 w-100" src="./Axiom VIP Images/assignment basic.pdf"   frameborder="0">
+    
+                </iframe>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+    
+                    
+                                
+    
+            
+                                <!-- </div>-->
+                                <div class=""> 
+                               <a href="http://127.0.0.1:5500/finalcquiz.html">   <button class=" btn py-1 px-4 democode fw-bold  " onclick="toggleButtons(this, this.nextElementSibling)">Quiz</button><br></a>  
+                                       
+                                    </div>
+                                    <div class=" "> 
+                                        <button data-bs-toggle="modal" data-bs-target="#exampleModal1" class=" btn py-1 px-4 democode fw-bold  ">Feedback</button><br>
+                                           
+                                        <div  class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                            <div class="modal-dialog modal-dialog-centered " >
+                                              
+                                                <div class="modal-content" style="background-color: #F5F5F5;" >
+                                     <div class="container">
+                                        <div class="row">
+                                                    <div class="  col position-relative ">
+                                                  <h1 class="modal-title fs-5 text-center mt-3" style="color: #004080;" id="exampleModalLabel">FEEDBACK AND RATING
+                                                <br>
+                                            <img class=" img-fluid h-25 w-25 " src="./Axiom VIP Images/ratings.jpg" alt=""></h1>
+                                        </div></div>
+                                    </div>
+                                        <button  type="button" class="btn-close position-absolute end-0 pe-5 pt-5" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                <div class="modal-body">
+                                                  <form>
+                                                    <div class="mb-3">
+                                                      <textarea class="border border-1 col-12 " name="feedback" id="feedback" cols="60" rows="5" placeholder="Message"></textarea>
+                                                    </div>
+                                                    <div class="mb-3">
+                                                      <h6 style="color:#004080;" class="text-center" >Rate us</h6>
+                                                      <div class="text-center"><i class="fa-solid fa-star fa-lg" style="color: #ffea00;"></i><i class="fa-solid fa-star fa-lg" style="color: #ffea00;"></i><i class="fa-solid fa-star fa-lg" style="color: #ffea00;"></i><i class="fa-solid fa-star fa-lg" style="color: #ffea00;"></i><i class="fa-solid fa-star fa-lg" style="color: #c7c6c6;"></i>
+                                                      </div>
+                            
+                                                    </div>
+                                                  </form>
+                                                </div>
+                                          
+                                                <div class="col text-center mb-4 ">
+                                                  <button type="button" class="btn btn-outline-dark"  data-bs-dismiss="modal">Cancel</button>
+                                                 <button type="button" data-bs-target="#exampleModal1245" data-bs-toggle="Modal" style="background-color: #004080;" class="btn text-white"><a class="text-decoration-none text-white">Submit</a></button>
+                                                </div> 
+                                                <div class="modal fade" id="exampleModal1245" tabindex="-1" aria-labelledby="exampleModalLabel"
+                                                                            aria-hidden="true">
+                                                                            <div class="modal-dialog modal-dialog-centered">
+                                                                                <div class="modal-content" style="background-color: #F5F5F5;">
+                                                                                    <div class="modal-header ">
+                                                                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                                                            aria-label="Close"></button>
+                                                                                    </div>
+                                                                                    <div class="modal-body">
+                                                    
+                                                                                        <form>
+                                                                                            <div class="text-center">
+                                                                                                <img class="img-fluid  " height="50px" width="50px"
+                                                                                                    src="./Axiom VIP Images/smile-sarcastic.gif" alt="">
+                                                                                            </div>
+                                                                                            <div class="mb-5">
+                                                                                                <h4 class="text-center">Thank You</h4>
+                                                                                                <h6 style="color:#004080;" class="text-center">For reaching out and
+                                                                                                    providing us with valuable feedback .</h6>
+                                                                                                <div class="col text-center mb-4 mt-5">
+                                                    
+                                                                                                    <button type="button" style="background-color: #004080;"
+                                                                                                        class="btn text-white"><a class="text-decoration-none text-white"
+                                                                                                            target="_self"
+                                                                                                            href="http://127.0.0.1:5501/feedback2.html">Back</a></button>
+                                                                                                </div>
+                                                    
+                                                                                            </div>
+                                                                                        </form>
+                                                                                    </div>
+                                                    
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                              </div>
+                                            </div>
+                                          </div>
+                            
+                            
+                                     
+                                        
+                                    </div>
+
+                                     </div>
+                    </div>
+                       
+                      
+    
+    
+    
+                    </div>
+            
+        </div>
+    </div>
+</div>
+<!-- @endsection  Footer Area -->
+<div class="position-fixed w-100 fixed-bottom" style="background-color: #004080; text-align: center;height: 40px;padding-top: 8px; position: static;">
+    <p>
+      <a href="#"  style="text-underline-offset: none;color: #ffff;" >Developed by Axiom TechGuru Pvt. Ltd.</a>
+    </p>
+  </div>
+
+  <script>
+
+    
+    document
+      .querySelector('input[type="file"]')
+      .addEventListener("change", function () {
+        // Reset the file input to clear any selected file
+        this.value = "";
+      });
+  </script>
+   <script>
+    var activeParentButton = null;
+
+    function toggleButtons(parentButton, childButton) {
+        if (activeParentButton !== parentButton) {
+            if (activeParentButton) {
+                activeParentButton.style.backgroundColor = "#ffffff";
+                activeParentButton.style.color = "#004080";
+                var siblingButton = activeParentButton.nextElementSibling;
+                while (siblingButton) {
+                    siblingButton.style.display = "none";
+                    siblingButton = siblingButton.nextElementSibling;
+                }
+            }
+
+            parentButton.style.backgroundColor = "#004080";
+            parentButton.style.color = "#ffffff";
+            var siblingButton = parentButton.nextElementSibling;
+            while (siblingButton) {
+                siblingButton.style='display:block; color: white;background-color: #004080;';
+                siblingButton = siblingButton.nextElementSibling;
+            }
+
+            activeParentButton = parentButton;
+        } else {
+            // Clicking the same parent button again should hide its child buttons
+            parentButton.style.backgroundColor = "#ffffff";
+            parentButton.style.color = "#004080";
+            var siblingButton = parentButton.nextElementSibling;
+            while (siblingButton) {
+                siblingButton.style.display = "none";                    siblingButton = siblingButton.nextElementSibling;
+            }
+
+            activeParentButton = null;
+        }
+    }
+</script>
+    <script>
+       
+    
+      
+        // Get all elements with the "hovern" class
+const listItems = document.querySelectorAll(".hovern");
+
+// Add click event listeners to toggle the "active" class
+listItems.forEach(item => {
+    item.addEventListener("click", () => {
+        // Remove the "active" class from all items
+        listItems.forEach(li => {
+            li.classList.remove("active");
+        });
+
+        // Add the "active" class to the clicked item
+        item.classList.add("active");
+    });
+});
+
+    </script>
+    
+
+
+</body>
+</html>

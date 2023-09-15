@@ -1,0 +1,46 @@
+body{
+    font-family: 'Inria Sans', sans-serif;
+}
+
+.democode:hover{
+    background-color: #004080;
+    color: white;
+}
+
+.democode{
+    background-color:white;
+    color:#004080;
+}
+
+.sessiond{
+    background-color: #004080;
+    color:white;
+}
+.sessiond:hover{
+    background-color: #004080;
+}
+
+.demo{
+    background-color: #004080;
+    color: white;
+    display: none;
+}
+
+.abtn{
+    display: none;  
+}
+
+a{
+    text-decoration:none;
+}
+
+
+.session:hover{ background-color: #004080;
+    color: white;}
+
+    .sess{
+        background-color:white;
+    color:#004080;
+}
+
+

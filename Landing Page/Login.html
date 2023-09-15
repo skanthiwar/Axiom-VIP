@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <!-- Include Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <script src="https://kit.fontawesome.com/439a542074.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container py-5">
+        <div class="row  text-center justify-content-center">
+            <div class="col-md-6 shadow rounded-3 mt-1 w-50 p-5">
+                <div class="img-fluid py-3">
+                    <img style="width: 100px" src="../Images/Axiom_VIP_logo.png" alt="">
+                </div>
+                <div>
+                    <h1 class="fs-5">“Use Your Axiom VIP Account”</h1>
+                        <hr class="text-dark">
+                    <div class="card-body">
+                        <form class=" " >
+                            <h4 class="mt-5">Log In</h4>
+                            <div class="d-flex shadow-sm mt-5">
+                              <img src="../Images/user.png" class="img img-fluid p-2 border border-2 border-end-0" alt="" >
+                                <div class="d-flex pt-1" style="height: 2.4rem;">
+                                    <div class="vr"></div>
+                                  </div>
+                                <input type="text" id="username" name="username" class="form-control py-2 border border-2 border-start-0 rounded-0" placeholder="User Id or Email" required>
+                            </div> 
+                            <div class="d-flex mt-5 shadow-sm">
+                                    <img src="../Images/password.png" class="img img-fluid p-2 border border-2 border-end-0" alt="" >
+                                <div class="d-flex pt-1" style="height: 2.4rem;">
+                                    <div class="vr"></div>
+                                  </div>
+                                <input type="text" id="username" name="username" class="form-control py-2 border border-2 border-start-0 rounded-0" placeholder="Password" required>
+                            </div> 
+                            <div class="d-flex justify-content-between mt-3">
+                                <div class="mb-3 form-check">
+                                    <input type="checkbox" class="form-check-input" id="rememberMe" name="rememberMe">
+                                    <label class="form-check-label" for="rememberMe">Remember Me</label>
+                                </div>
+                                <div >
+                                    <a href="../Landing Page/Reset.html">Forgot Password?</a>
+                                </div>
+                            </div>
+                        <div class="d-flex flex-column justify-content-center">
+                            <a href="../Home Page/home.html"> <button type="button" class=" btn text-white mx-auto my-3" style=" background-color: #004080;">Log In</button></a>
+                        </div>
+                        <div class="card-footer mt-2">
+                            No Account Yet? <a href="../Landing Page/Registration_Form.html">Register Now</a>
+                        </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Include Bootstrap JavaScript (optional) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .container {
+            margin-top: 20px;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        .form-label {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container shadow-lg rounded-3 py-3 mb-4" style="max-width: 750px;">
+        <h2 class="text-center" style="color: #004080;">Registration Form</h2>
+        <form id="registrationForm" class="my-4 px-3" onsubmit="return validateForm()">
+            <!-- Personal Information Section -->
+            <h4 class="text-center text-decoration-underline my-2">Personal Information</h4>
+            <div class="row mt-4">
+                <div class="col-md-6 col-lg-6 col-sm-12">
+                    <div class="form-group">
+                        <label class="form-label" for="firstName">First Name</label>
+                        <input type="text" class="form-control" id="firstName" placeholder="Enter your first name" required>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-6 col-sm-12">
+                    <div class="form-group">
+                        <label class="form-label" for="lastName">Last Name</label>
+                        <input type="text" class="form-control" id="lastName" placeholder="Enter your last name" required>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group d-flex ">
+                <label class="form-label">Gender</label>
+                <div class="form-check mx-auto">
+                    <input class="form-check-input" type="radio" name="gender" id="male" value="male" required>
+                    <label class="form-check-label" for="male">Male</label>
+                </div>
+                <div class="form-check mx-auto">
+                    <input class="form-check-input" type="radio" name="gender" id="female" value="female" required>
+                    <label class="form-check-label" for="female">Female</label>
+                </div>
+                <div class="form-check mx-auto">
+                    <input class="form-check-input" type="radio" name="gender" id="other" value="other" required>
+                    <label class="form-check-label" for="other">Other</label>
+                </div>
+            </div>
+            <div class="row">
+
+                <div class="form-group col-md-6 col-lg-6 col-sm-12">
+                    <label class="form-label" for="dob">Date of Birth</label>
+                    <input type="date" class="form-control" id="dob" required>
+                </div>
+                <div class="form-group col-md-6 col-lg-6 col-sm-12">
+                    <label class="form-label" for="age">Age</label>
+                    <input type="number" class="form-control" id="age" placeholder="Enter your age" required>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="form-label" for="email">Email address</label>
+                <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
+            </div>
+            <div class="row">
+
+                <div class="form-group col-md-6 col-lg-6 col-sm-12">
+                    <label class="form-label" for="mobile">Mobile Number</label>
+                    <input type="number" class="form-control" id="mobile" placeholder="Enter your mobile number" required>
+                </div>
+                <div class="form-group col-md-6 col-lg-6 col-sm-12">
+                    <label class="form-label" for="home">Guardian Number</label>
+                    <input type="number" class="form-control" id="home" placeholder="Enter your guardian number">
+                </div>
+            </div>
+            
+            <!-- Permanent Address -->
+            <h4 class="text-center my-2 text-decoration-underline ">Permanent Address</h4>
+            <div class="form-group">
+                <label class="form-label" for="streetPermanent">Street Address</label>
+                <input type="text" class="form-control" id="streetPermanent" placeholder="Street Address" required>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label class="form-label" for="cityPermanent">City</label>
+                        <input type="text" class="form-control" id="cityPermanent" placeholder="City" required>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label class="form-label" for="statePermanent">State/Province</label>
+                        <input type="text" class="form-control" id="statePermanent" placeholder="State/Province" required>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label class="form-label" for="pinPermanent">Pin code/Zip Code</label>
+                        <input type="number" class="form-control" id="pinPermanent" placeholder="Pin code/Zip Code" required>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label class="form-label" for="countryPermanent">Country</label>
+                        <input type="text" class="form-control" id="countryPermanent" placeholder="Country" required>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Local Address -->
+            <h4 class="text-center my-2 text-decoration-underline">Local Address</h4>
+            <div class="form-group">
+                <label class="form-label" for="streetLocal">Street Address</label>
+                <input type="text" class="form-control" id="streetLocal" placeholder="Street Address" required>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label class="form-label" for="cityLocal">City</label>
+                        <input type="text" class="form-control" id="cityLocal" placeholder="City" required>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label class="form-label" for="stateLocal">State/Province</label>
+                        <input type="text" class="form-control" id="stateLocal" placeholder="State/Province" required>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label class="form-label" for="pinLocal">Pin code/Zip Code</label>
+                        <input type="number" class="form-control" id="pinLocal" placeholder="Pin code/Zip Code" required>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label class="form-label" for="countryLocal">Country</label>
+                        <input type="text" class="form-control" id="countryLocal" placeholder="Country" required>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Education Information Section -->
+            <h4 class="text-center my-2 text-decoration-underline">Education Information</h4>
+            <div class="form-group">
+                <label class="form-label" for="education">Education</label>
+                <input type="text" class="form-control" id="education" placeholder="Enter your education" required>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label class="form-label" for="sscBoard">SSC Board</label>
+                        <input type="text" class="form-control" id="sscBoard" placeholder="Enter your SSC board" required>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label class="form-label" for="sscYear">Passing Year (SSC)</label>
+                        <input type="number" class="form-control" id="sscYear" placeholder="Enter your SSC passing year" required>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label class="form-label" for="hscBoard">HSC Board</label>
+                        <input type="text" class="form-control" id="hscBoard" placeholder="Enter your HSC board" required>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label class="form-label" for="hscYear">Passing Year (HSC)</label>
+                        <input type="number" class="form-control" id="hscYear" placeholder="Enter your HSC passing year" required>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+            <div class="form-group col-md-6">
+                <label class="form-label" for="degree">Degree</label>
+                <input type="text" class="form-control" id="degree" placeholder="Enter your degree" required>
+            </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label class="form-label" for="degreeYear">Passing Year (Degree)</label>
+                        <input type="number" class="form-control" id="degreeYear" placeholder="Enter your degree passing year" required>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label class="form-label" for="masters">Masters</label>
+                        <input type="text" class="form-control" id="masters" placeholder="Enter your master's degree" required>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label class="form-label" for="mastersYear">Passing Year (Masters)</label>
+                        <input type="number" class="form-control" id="mastersYear" placeholder="Enter your master's degree passing year" required>
+                    </div>
+                </div>
+                <div class=" ">
+                    <div class=" d-flex justify-content-around align-items-center my-3">
+                        <label class="form-label" for="cv">Attach your CV</label>
+                        <input type="file" class="form-control w-50" id="cv" accept=".pdf,.doc,.docx" required>
+                    </div>
+                </div>
+            </div>
+            <div class="d-flex justify-content-center my-3">
+                <a href="Thankyou.html">
+                <button type="button" class="btn text-white fw-bold px-3 mx-auto" style="background-color: #004080;">Register</button>
+            </a>
+            </div>
+        </form>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        function validateForm() {
+            const firstName = document.getElementById('firstName').value;
+            const lastName = document.getElementById('lastName').value;
+            const gender = document.querySelector('input[name="gender"]:checked');
+            const dob = document.getElementById('dob').value;
+            const age = document.getElementById('age').value;
+            const email = document.getElementById('email').value;
+            const mobile = document.getElementById('mobile').value;
+            const countryPermanent = document.getElementById('countryPermanent').value;
+            const education = document.getElementById('education').value;
+            const sscBoard = document.getElementById('sscBoard').value;
+            const sscYear = document.getElementById('sscYear').value;
+            const hscBoard = document.getElementById('hscBoard').value;
+            const hscYear = document.getElementById('hscYear').value;
+            const degree = document.getElementById('degree').value;
+            const degreeYear = document.getElementById('degreeYear').value;
+            const masters = document.getElementById('masters').value;
+            const mastersYear = document.getElementById('mastersYear').value;
+            const cv = document.getElementById('cv').value;
+
+            if (!firstName || !lastName || !gender || !dob || !age || !email || !mobile || countryPermanent === "Select your country" ||
+                !education || !sscBoard || !sscYear || !hscBoard || !hscYear || !degree || !degreeYear ||
+                !masters || !mastersYear || !cv) {
+                alert('Please fill in all required fields.');
+                return false;
+            }
+
+            return true;
+        }
+    </script>
+</body>
+</html>
