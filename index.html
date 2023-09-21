@@ -5,6 +5,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Axiom VIP</title>
+	<link rel="icon" href="..//Images/Axiom_VIP_logo.png">
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
 		integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
 	<!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"> -->
@@ -21,7 +22,38 @@
 			padding: 0;
 
 		}
+		.vector{
+			animation: imgg 4s ease-in-out infinite;
+			animation-delay: 2s;
 
+		}
+		@keyframes imgg{
+			0%{
+				transform: translateX(0);
+			}
+			50%{
+				transform: translateX(-22px);
+			}
+			0%{
+				transform: translateX(0);
+			}
+		}
+		.vector1{
+			animation: imgg1 4s ease-in-out infinite;
+			animation-delay: 2s;
+
+		}
+		@keyframes imgg1{
+			0%{
+				transform: translateY(0);
+			}
+			50%{
+				transform: translateY(-22px);
+			}
+			0%{
+				transform: translateY(0);
+			}
+		}
 		.bg-color-blue {
 			background-color: #004080;
 		}
@@ -53,10 +85,369 @@
 				<img src="Images/Axiom_VIP_logo.png" alt="Axiom" width="100" height="55">
 			</a>
 		
-			<a href="./Landing Page/Login.html">	<button class="login btn ps-4 pe-4 text-white fs-5 pt-1 pb-1"
-				style="background-color: #004080; font-family: Inria Sans;" type="submit">Login</button> </a>
+			<button data-bs-toggle="modal" data-bs-target="#ModalLog" class=" login btn ps-4 pe-4 text-white fs-5 pt-1 pb-1"
+				style="background-color: #004080; font-family: Inria Sans;" type="submit">Login</button>
 		</div>
 	</nav> <br><br><br>
+
+  <!-- Modal Start Of Login form -->
+  <div class="modal fade " id="ModalLog" tabindex="-1" aria-labelledby="modallabel-log" aria-hidden="true">
+	<div class="modal-dialog shadow">
+	  <div class="modal-content">
+		<div class="">
+		  <h1 class="" id="modallabel"></h1>
+		  <button type="button" class="btn-close float-end me-2" data-bs-dismiss="modal" aria-label="Close"></button>
+		</div>
+		<div class="modal-body container py-5">
+				<div class="row  text-center justify-content-center">
+					<div class="col-md-6 rounded-3 w-75">
+						<div class="img-fluid ">
+							<img style="width: 100px" src="../Images/Axiom_VIP_logo.png" alt="">
+						</div>
+						<div>
+							<h1 class="fs-5">“Use Your Axiom VIP Account”</h1>
+								<hr class=" mt-4 text-dark">
+							<div class="card-body">
+								<form class=" " >
+									<h4 class="mt-5">Log In</h4>
+									<div class="d-flex shadow-sm mt-5">
+									  <img src="../Images/user.png" class="img img-fluid p-2 border border-2 border-end-0" alt="" >
+										<div class="d-flex pt-1" style="height: 2.4rem;">
+											<div class="vr"></div>
+										  </div>
+										<input type="text" id="username" name="username" class="form-control py-2 border border-2 border-start-0 rounded-0" placeholder="User Id or Email" required>
+									</div> 
+									<div class="d-flex mt-5 shadow-sm">
+											<img src="../Images/password.png" class="img img-fluid p-2 border border-2 border-end-0" alt="" >
+										<div class="d-flex pt-1" style="height: 2.4rem;">
+											<div class="vr"></div>
+										  </div>
+										<input type="password" id="pass" name="Password" class="form-control py-2 border border-2 border-start-0 rounded-0" placeholder="Password" required>
+									</div> 
+									<div class="d-flex justify-content-between mt-3">
+										<div class="mb-3 form-check">
+											<input type="checkbox" class="form-check-input" id="rememberMe" name="rememberMe">
+											<label class="form-check-label" for="rememberMe">Remember Me</label>
+										</div>
+										<div >
+											<a data-bs-toggle="modal" data-bs-target="#ModalReset" href="../Landing Page/Reset.html">Forgot Password?</a>
+										</div>
+									</div>
+								<div class="d-flex flex-column justify-content-center">
+									<a href="../Home Page/home.html"> <button type="button" class=" btn text-white mx-auto my-3" style=" background-color: #004080;">Log In</button></a>
+								</div>
+								<div class="card-footer mt-2">
+									No Account Yet? <span style="cursor: pointer; color: #004080; text-decoration: underline;" data-bs-toggle="modal" data-bs-target="#ModalReg">Register Now</span>
+								</div>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+		</div>
+	  </div>
+	</div>
+  </div>
+  <!-- Modal End Of Login form -->
+
+  <!-- Modal Start Of Registration form -->
+  <div class="modal fade" id="ModalReg" tabindex="-1" aria-labelledby="modallabel-reg" aria-hidden="true">
+	<div class="modal-dialog modal-xl">
+	  <div class="modal-content">
+		<div class="">
+		  <h1 class=" fs-5" id="modallabel-reg"></h1>
+		  <button type="button" class="btn-close float-end me-2" data-bs-dismiss="modal" aria-label="Close"></button>
+		</div>
+		<div class="modal-body container">
+				<div class="rounded-3">
+					<h2 class="text-center" style="color: #004080;">Registration Form</h2>
+					<form id="registrationForm" class="my-4 px-3" onsubmit="return validateForm()">
+						<!-- Personal Information Section -->
+						<h4 class="text-center text-decoration-underline my-2">Personal Information</h4>
+						<div class="row mt-4 my-3">
+							<div class="col-md-6 col-lg-6 col-sm-12">
+								<div class="form-group">
+									<label class="form-label" for="firstName">First Name</label>
+									<input type="text" class="form-control" id="firstName" placeholder="Enter your first name" >
+								</div>
+							</div>
+							<div class="col-md-6 col-lg-6 col-sm-12">
+								<div class="form-group">
+									<label class="form-label" for="lastName">Last Name</label>
+									<input type="text" class="form-control" id="lastName" placeholder="Enter your last name" >
+								</div>
+							</div>
+						</div>
+						<div class="form-group d-flex ">
+							<label class="form-label">Gender</label>
+							<div class="form-check mx-auto">
+								<input class="form-check-input" type="radio" name="gender" id="male" value="male" >
+								<label class="form-check-label" for="male">Male</label>
+							</div>
+							<div class="form-check mx-auto">
+								<input class="form-check-input" type="radio" name="gender" id="female" value="female" >
+								<label class="form-check-label" for="female">Female</label>
+							</div>
+							<div class="form-check mx-auto">
+								<input class="form-check-input" type="radio" name="gender" id="other" value="other" >
+								<label class="form-check-label" for="other">Other</label>
+							</div>
+						</div>
+						<div class="row my-3">
+							<div class="form-group col-md-6 col-lg-6 col-sm-12">
+								<label class="form-label" for="dob">Date of Birth</label>
+								<input type="date" class="form-control" id="dob" >
+							</div>
+							<div class="form-group col-md-6 col-lg-6 col-sm-12">
+								<label class="form-label" for="age">Age</label>
+								<input type="number" class="form-control" id="age" placeholder="Enter your age" >
+							</div>
+						</div>
+						<div class="form-group my-3">
+							<label class="form-label" for="email">Email address</label>
+							<input type="email" class="form-control" id="email" placeholder="Enter your email" >
+						</div>
+						<div class="row my-3">
+							<div class="form-group col-md-6 col-lg-6 col-sm-12">
+								<label class="form-label" for="mobile">Mobile Number</label>
+								<input type="number" class="form-control" id="mobile" placeholder="Enter your mobile number" >
+							</div>
+							<div class="form-group col-md-6 col-lg-6 col-sm-12">
+								<label class="form-label" for="home">Guardian Number</label>
+								<input type="number" class="form-control" id="home" placeholder="Enter your guardian number">
+							</div>
+						</div>
+						
+						<!-- Permanent Address -->
+						<h4 class="text-center my-3 text-decoration-underline ">Permanent Address</h4>
+						<div class="form-group">
+							<label class="form-label" for="streetPermanent">Street Address</label>
+							<input type="text" class="form-control" id="streetPermanent" placeholder="Street Address" >
+						</div>
+						<div class="row my-3">
+							<div class="col-md-6">
+								<div class="form-group">
+									<label class="form-label" for="cityPermanent">City</label>
+									<input type="text" class="form-control" id="cityPermanent" placeholder="City" >
+								</div>
+							</div>
+							<div class="col-md-6">
+								<div class="form-group">
+									<label class="form-label" for="statePermanent">State/Province</label>
+									<input type="text" class="form-control" id="statePermanent" placeholder="State/Province" >
+								</div>
+							</div>
+						</div>
+						<div class="row my-3">
+							<div class="col-md-6">
+								<div class="form-group">
+									<label class="form-label" for="pinPermanent">Pin code/Zip Code</label>
+									<input type="number" class="form-control" id="pinPermanent" placeholder="Pin code/Zip Code" >
+								</div>
+							</div>
+							<div class="col-md-6">
+								<div class="form-group">
+									<label class="form-label" for="countryPermanent">Country</label>
+									<input type="text" class="form-control" id="countryPermanent" placeholder="Country" >
+								</div>
+							</div>
+						</div>
+			
+						<!-- Local Address -->
+						<h4 class="text-center my-3 text-decoration-underline">Local Address</h4>
+						<div class="form-group">
+							<label class="form-label" for="streetLocal">Street Address</label>
+							<input type="text" class="form-control" id="streetLocal" placeholder="Street Address" >
+						</div>
+						<div class="row my-3">
+							<div class="col-md-6">
+								<div class="form-group">
+									<label class="form-label" for="cityLocal">City</label>
+									<input type="text" class="form-control" id="cityLocal" placeholder="City" >
+								</div>
+							</div>
+							<div class="col-md-6">
+								<div class="form-group">
+									<label class="form-label" for="stateLocal">State/Province</label>
+									<input type="text" class="form-control" id="stateLocal" placeholder="State/Province" >
+								</div>
+							</div>
+						</div>
+						<div class="row my-3">
+							<div class="col-md-6">
+								<div class="form-group">
+									<label class="form-label" for="pinLocal">Pin code/Zip Code</label>
+									<input type="number" class="form-control" id="pinLocal" placeholder="Pin code/Zip Code" >
+								</div>
+							</div>
+							<div class="col-md-6">
+								<div class="form-group">
+									<label class="form-label" for="countryLocal">Country</label>
+									<input type="text" class="form-control" id="countryLocal" placeholder="Country" >
+								</div>
+							</div>
+						</div>
+		
+						<!-- Education Information Section -->
+						<h4 class="text-center my-3 text-decoration-underline">Education Information</h4>
+						<div class="form-group">
+							<label class="form-label" for="education">Education</label>
+							<input type="text" class="form-control" id="education" placeholder="Enter your education" >
+						</div>
+						<div class="row my-3">
+							<div class="col-md-6">
+								<div class="form-group">
+									<label class="form-label" for="sscBoard">SSC Board</label>
+									<input type="text" class="form-control" id="sscBoard" placeholder="Enter your SSC board" >
+								</div>
+							</div>
+							<div class="col-md-6">
+								<div class="form-group">
+									<label class="form-label" for="sscYear">Passing Year (SSC)</label>
+									<input type="number" class="form-control" id="sscYear" placeholder="Enter your SSC passing year" >
+								</div>
+							</div>
+						</div>
+						<div class="row my-3">
+							<div class="col-md-6">
+								<div class="form-group">
+									<label class="form-label" for="hscBoard">HSC Board</label>
+									<input type="text" class="form-control" id="hscBoard" placeholder="Enter your HSC board" >
+								</div>
+							</div>
+							<div class="col-md-6">
+								<div class="form-group">
+									<label class="form-label" for="hscYear">Passing Year (HSC)</label>
+									<input type="number" class="form-control" id="hscYear" placeholder="Enter your HSC passing year" >
+								</div>
+							</div>
+						</div>
+						<div class="row my-3">
+						<div class="form-group col-md-6">
+							<label class="form-label" for="degree">Degree</label>
+							<input type="text" class="form-control" id="degree" placeholder="Enter your degree" >
+						</div>
+							<div class="col-md-6">
+								<div class="form-group">
+									<label class="form-label" for="degreeYear">Passing Year (Degree)</label>
+									<input type="number" class="form-control" id="degreeYear" placeholder="Enter your degree passing year" >
+								</div>
+							</div>
+						</div>
+						<div class="row my-3">
+							<div class="col-md-6">
+								<div class="form-group">
+									<label class="form-label" for="masters">Masters</label>
+									<input type="text" class="form-control" id="masters" placeholder="Enter your master's degree" >
+								</div>
+							</div>
+							<div class="col-md-6">
+								<div class="form-group">
+									<label class="form-label" for="mastersYear">Passing Year (Masters)</label>
+									<input type="number" class="form-control" id="mastersYear" placeholder="Enter your master's degree passing year" >
+								</div>
+							</div>
+							<div class="my-3">
+								<div class=" d-flex justify-content-around align-items-center my-3">
+									<label class="form-label" for="cv">Attach your CV</label>
+									<input type="file" class="form-control w-50" id="cv" accept=".pdf,.doc,.docx" >
+								</div>
+							</div>
+						</div>
+						<div class="d-flex justify-content-center my-2">
+							<button type="submit" data-bs-toggle="modal" data-bs-target="#ModalThank" class="btn text-white fw-bold px-3 mx-auto" style="background-color: #004080;">Register</button>
+						</div>
+					</form>
+				</div>
+		</div>
+	  </div>
+	</div>
+  </div>
+  <!-- Modal End Of Registration form -->
+
+
+  <!-- Modal Start of Thankyou -->
+ 
+  <!-- Button trigger modal -->  
+  <div class="modal fade" id="ModalThank" tabindex="-1" aria-labelledby="modallabel-thank" aria-hidden="true">
+	<div class="modal-dialog">
+	  <div class="modal-content">
+		<div class="">
+		  <h1 class="modal-title fs-5" id="ThankyouModal"></h1>
+		  <button type="button" class="btn-close float-end me-2 mt-2" data-bs-dismiss="modal" aria-label="Close"></button>
+		</div>
+		<div class="modal-body">
+			<div class="row  text-center justify-content-center w-75 ">
+				<div class="col-md-6 shadow rounded-3 mt-5">
+						<div class="img-fluid my-5">
+						<img style="width: 100px" src="../Images/registration successfull.png" alt="">
+					</div>
+					<div>
+							<form class="" >
+								<div class="mb-3">
+									<p class="text-start fs-3 text-dark text-center mt-5 ">
+										Registration Has Been Successful 
+									</p>
+	
+									<h5 class="text-success">Admin Will Contact You Shortly </h5>
+			
+								</div> 
+							<div class="d-flex flex-column justify-content-center">
+								<a href="#">
+								<button type="submit" class="btn text-white mx-auto my-4" style=" background-color:#004080;">Let's Explore More</button>
+							</a>
+							</div>
+							</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	  </div>
+	</div>
+  </div>
+  <!-- Modal End of Thankyou -->
+
+  <!-- Modal Start of Reset -->
+  <div class="modal fade " id="ModalReset" tabindex="-1" aria-labelledby="modallabel-reset" aria-hidden="true">
+	<div class="modal-dialog shadow">
+	  <div class="modal-content">
+		<div class="">
+		  <h1 class="" id="modallabel"></h1>
+		  <button type="button" class="btn-close float-end me-2" data-bs-dismiss="modal" aria-label="Close"></button>
+		</div>
+		<div class="modal-body container py-5">
+				<div class="row  text-center justify-content-center">
+					<div class="col-md-6 rounded-3 w-75">
+						<div class="img-fluid ">
+							<img style="width: 100px" src="../Images/Axiom_VIP_logo.png" alt="">
+						</div>
+						<div>
+							<h1 class="">Forgot Password</h1>
+							<div class="card-body">
+								<form class="" >
+									<div class="">
+										<p class="text-start text-danger">Lost your Password ? <br>
+											By clicking on send request the password sent successfully to your Register Email Address </p>
+										<input type="text" id="username" name="username" class="form-control py-2" placeholder="Email" required>
+									</div> 
+								<div class="d-flex flex-column justify-content-center">
+									<a href="../Landing Page/password_success.html">
+									<button type="submit" class=" btn text-white mx-auto my-4" style=" background-color: #004080;">Send Request</button>
+								</a>
+									<a href="">
+									<button type="submit" class="btn mx-auto mb-4" style="color: #004080; border: 1px solid #004080;">Back to Login</button>
+								</a>
+								</div>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+		</div>
+	  </div>
+	</div>
+  </div>
+  <!-- Modal End of Reset -->
 
 	<div class="pb-5" style=" background: linear-gradient(180deg, rgba(118, 157, 255, 0.83) 0%, rgba(217, 217, 217, 0) 100%)">
 		<div class="container">
@@ -69,16 +460,17 @@
 					<br>
 					<div class="h2 color-blue">“IT Solutions, By IT Masters“</div><br>
 					<div class="fs-3 fw-bold">Become A Member
-						<a href="Landing Page/Registration_Form.html"><button type="button"
-								class="login text-white px-3 bg-color-blue responsive rounded py-1 fw-bold fs-5">Join
-								Us</button></a>
+						<button type="button"
+								class="login text-white px-3 bg-color-blue responsive rounded py-1 fw-bold fs-5" data-bs-toggle="modal" data-bs-target="#exampleModal">Join
+								Us</button>
 					</div>
 				</div>
 
-				<div class="col-12 col-md-6 col-sm-12 mt-5 "
+				<div class="vector col-12 col-md-6 col-sm-12 mt-5 "
 					style="background: url(Images/Vector.png); background-repeat: no-repeat; background-position:center; background-size: contain;">
-						<div class="row justify-content-end">
-						<div class="col-6 col-md-6 col-sm-6 ms-5">
+					<!-- <img class="img img-fluid" src="./Axiom VIP Images/Vector.png" alt=""> -->
+					<div class="row justify-content-end">
+						<div class="vector1 col-6 col-md-6 col-sm-6 ms-5">
 							<a href="https://www.youtube.com/@SushilPudkeAxiom/streams" class="ms-5 ">
 								<img src="Images/youtube.png" class="img img-fluid "
 									width="60%">
@@ -86,13 +478,13 @@
 						</div>
 					</div>
 					<div class="row justify-content-evenly mt-5">
-						<div class="col col-6 col-sm-6 mt-5 ">
+						<div class="vector1 col col-6 col-sm-6 mt-5 ">
 							<a href="#" class=" ">
 								<img src="Images/meet.png" class="img img-fluid "
 									width="60%">
 							</a>
 						</div>
-						<div class="col col-6 col-md-6 col-sm-6 mt-5">
+						<div class="vector1 col-6 col-md-6 col-sm-6 mt-5">
 							<a href="#" class="ms-5 ">
 								<img src="Images/team.png" class="img img-fluid "
 									width="60%">
@@ -135,63 +527,185 @@
 
 	<!-- technology -->
 
-	<div style="background-color: #EEF1F7; ">
+	<div style="background-color: #eef1f7" class="mt-5">
 		<div class="container mb-5">
-			<h2 class="mt-5 text-center pt-5">A BROAD SECTION OF TECHNOLOGY</h2>
-			<div class="d-flex justify-content-center ">
-				<hr class="w-25 mt-3">
-				<p class="fs-5  fw-bold">Trending Technology</p>
-				<hr class="w-25 mt-3">
+		  <h2 class="mt-5 text-center pt-5">A BROAD SECTION OF TECHNOLOGY</h2>
+		  <div class="d-flex justify-content-center">
+			<hr class="w-25" />
+			<p class="fs-5 px-1 fw-bold">Trending Technology</p>
+			<hr class="w-25" />
+		  </div>
+		  <div class="row mt-5" style="z-index: -1">
+			<div class="col-md-12 mb-5">
+			  <div class="owl-carousel owl-theme" id="clients-carousel">
+				<a href="./TechnologyTables/CLangtablenormally.html">
+				  <div class="item box">
+					<img
+					  alt="client logo"
+					  class="client-img w-75 p-2"
+					  src="./Images/Cprogm.png"
+					/></div
+				></a>
+				<a href="./TechnologyTables/CPPtable.html"
+				  ><div class="item box">
+					<img
+					  alt="client logo"
+					  class="client-img w-75 p-2"
+					  src="../Images/CPP.png"
+					/></div
+				></a>
+				<a href="./TechnologyTables/HTMLtable.html"
+				  ><div class="item box">
+					<img
+					  alt="client logo"
+					  class="client-img w-75 p-2"
+					  src="../Images/HTML1.png"
+					/></div
+				></a>
+				<a href="./TechnologyTables/CSStable.html"
+				  ><div class="item box">
+					<img
+					  alt="client logo"
+					  class="client-img w-75 p-2"
+					  src="../Images/CSS1.png"
+					/></div
+				></a>
+				<a href="./TechnologyTables/Bootstrap.html"
+				  ><div class="item box">
+					<img
+					  alt="client logo"
+					  class="client-img w-75 p-2"
+					  src="../Images/bootstrap1.png"
+					/></div
+				></a>
+				<a href="./TechnologyTables/JAvascript.html"
+				  ><div class="item box">
+					<img
+					  alt="client logo"
+					  class="client-img w-75 p-2"
+					  src="../Images/js1.png"
+					/></div
+				></a>
+				<a href="./TechnologyTables/JQuery.html"
+				  ><div class="item box">
+					<img
+					  alt="client logo"
+					  class="client-img w-75 p-2"
+					  src="../Images/jquery1.png"
+					/></div
+				></a>
+				<a href="./TechnologyTables/Laravel.html"
+				  ><div class="item box">
+					<img
+					  alt="client logo"
+					  class="client-img w-75 p-2"
+					  src="../Images/laravel.png"
+					/></div
+				></a>
+				<a href="./TechnologyTables/PHPtable.html"
+				  ><div class="item box">
+					<img
+					  alt="client logo"
+					  class="client-img w-75 p-2"
+					  src="../Images/php1.png"
+					/></div
+				></a>
+				<a href="./TechnologyTables/Python.html"
+				  ><div class="item box">
+					<img
+					  alt="client logo"
+					  class="client-img w-75 p-2"
+					  src="../Images/python.png"
+					/></div
+				></a>
+				<a href="#"
+				  ><div class="item box">
+					<img
+					  alt="client logo"
+					  class="client-img w-75 p-2"
+					  src="../Images/java.png"
+					/></div
+				></a>
+				<a href="#"
+				  ><div class="item box">
+					<img
+					  alt="client logo"
+					  class="client-img w-75 p-2"
+					  src="../Images/ajax1.png"
+					/></div
+				></a>
+				<a href="./TechnologyTables/Angular.html"
+				  ><div class="item box">
+					<img
+					  alt="client logo"
+					  class="client-img w-75 p-2"
+					  src="../Images/angular.png"
+					/></div
+				></a>
+				<a href="./TechnologyTables/Tailwind.html"
+				  ><div class="item box">
+					<img
+					  alt="client logo"
+					  class="client-img w-75 p-2"
+					  src="../Images/tailwind css.png"
+					/></div
+				></a>
+				<a href="./TechnologyTables/ReactNAtivetable.html"
+				  ><div class="item box">
+					<img
+					  alt="client logo"
+					  class="client-img w-75 p-2"
+					  src="../Images/react netive.png"
+					/></div
+				></a>
+				<a href="./TechnologyTables/Flutter.html"
+				  ><div class="item box">
+					<img
+					  alt="client logo"
+					  class="client-img w-75 p-2"
+					  src="../Images/flutter.png"
+					/></div
+				></a>
+				<a href="./TechnologyTables/Meantable.html"
+				  ><div class="item box">
+					<img
+					  alt="client logo"
+					  class="client-img w-75 p-2"
+					  src="../Images/mean stack.png"
+					/></div
+				></a>
+				<a href="./TechnologyTables/Merntable.html"
+				  ><div class="item box">
+					<img
+					  alt="client logo"
+					  class="client-img w-75 p-2"
+					  src="../Images/mernstack.png"
+					/></div
+				></a>
+				<a href="./TechnologyTables/Github.html"
+				  ><div class="item box">
+					<img
+					  alt="client logo"
+					  class="client-img w-75 p-2"
+					  src="../Images/github.png"
+					/></div
+				></a>
+				<a href="./TechnologyTables/Django.html"
+				  ><div class="item box">
+					<img
+					  alt="client logo"
+					  class="client-img w-75 p-2"
+					  src="../Images/django.png"
+					/></div
+				></a>
+			  </div>
 			</div>
-			<div class="row mt-5 " style="z-index: -1;">
-				<div class="col-md-12 mb-5 ">
-					<div class="owl-carousel owl-theme  " id="clients-carousel">
-						<a href="">
-						<div class="item box"><img alt="client logo" class="client-img w-75 p-2"
-								src="Images/Cprogm.png"></div></a>
-						<a href=""><div class="item box"><img alt="client logo" class="client-img w-75 p-2"
-								src="Images/CPP.png"></div></a>
-						<a href=""><div class="item box"><img alt="client logo" class="client-img w-75 p-2"
-								src="Images/HTML1.png"></div></a>
-						<a href=""><div class="item box"><img alt="client logo" class="client-img w-75 p-2"
-								src="Images/CSS1.png"></div></a>
-						<a href=""><div class="item box"><img alt="client logo" class="client-img w-75 p-2"
-								src="Images/bootstrap1.png"></div></a>
-						<a href=""><div class="item box"><img alt="client logo" class="client-img w-75 p-2"
-								src="Images/js1.png"></div></a>
-						<a href=""><div class="item box"><img alt="client logo" class="client-img w-75 p-2"
-								src="Images/jquery1.png"></div></a>
-						<a href=""><div class="item box"><img alt="client logo" class="client-img w-75 p-2"
-								src="Images/laravel.png"></div></a>
-								<a href=""><div class="item box"><img alt="client logo" class="client-img w-75 p-2"
-								src="Images/php1.png"></div></a>
-								<a href=""><div class="item box"><img alt="client logo" class="client-img w-75 p-2"
-								src="Images/python.png"></div></a>
-								<a href=""><div class="item box"><img alt="client logo" class="client-img w-75 p-2"
-								src="Images/java.png"></div></a>
-								<a href=""><div class="item box"><img alt="client logo" class="client-img w-75 p-2"
-								src="Images/ajax1.png"></div></a>
-								<a href=""><div class="item box"><img alt="client logo" class="client-img w-75 p-2"
-								src="Images/angular.png"></div></a>
-								<a href=""><div class="item box"><img alt="client logo" class="client-img w-75 p-2"
-								src="Images/tailwind css.png"></div></a>
-								<a href=""><div class="item box"><img alt="client logo" class="client-img w-75 p-2"
-								src="Images/react netive.png"></div></a>
-								<a href=""><div class="item box"><img alt="client logo" class="client-img w-75 p-2"
-								src="Images/flutter.png"></div></a>
-								<a href=""><div class="item box"><img alt="client logo" class="client-img w-75 p-2"
-								src="Images/mean stack.png"></div></a>
-								<a href=""><div class="item box"><img alt="client logo" class="client-img w-75 p-2"
-								src="Images/mernstack.png"></div></a>
-								<a href=""><div class="item box"><img alt="client logo" class="client-img w-75 p-2"
-								src="Images/github.png"></div></a>
-								<a href=""><div class="item box"><img alt="client logo" class="client-img w-75 p-2"
-								src="Images/django.png"></div></a>
-					</div>
-				</div>
-			</div>
+		  </div>
 		</div>
-	</div>
+	  </div>
+
+
+
 	<!-- certificate -->
 	<div class="row w-100 gx-0 gy-0 pt-2 pb-2" style="background-color: #E6EDFB;">
 		<div class="col-lg-6 col-md-6 col-sm-12 col-12 ps-5 mt-5 pt-5">
@@ -217,10 +731,10 @@
 	</div>
 
 	<!-- Footer -->
-	<div class=" w-100"
+	<div class=" w-100 "
 		style="background-color: #004080; text-align: center;height: 40px;padding-top: 8px; position: static;">
 		<p>
-			<a href="#" style="text-underline-offset: none;color: #ffff;">Developed by Axiom TechGuru Pvt. Ltd.</a>
+			<a href="https://www.axiomtechguru.com" style="text-underline-offset: none;color: #ffff;">Developed by Axiom TechGuru Pvt. Ltd.</a>
 		</p>
 	</div>
 
