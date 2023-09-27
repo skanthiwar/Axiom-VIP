@@ -14,6 +14,7 @@
 	<link href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
 		rel="stylesheet">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inria+Sans&display=swap">
+	
 	<!-- <link href="style.css" rel="stylesheet"> -->
 	<style>
 		@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
@@ -23,38 +24,7 @@
 			padding: 0;
 
 		}
-		.vector{
-			animation: imgg 4s ease-in-out infinite;
-			animation-delay: 2s;
 
-		}
-		@keyframes imgg{
-			0%{
-				transform: translateX(0);
-			}
-			50%{
-				transform: translateX(-22px);
-			}
-			0%{
-				transform: translateX(0);
-			}
-		}
-		.vector1{
-			animation: imgg1 4s ease-in-out infinite;
-			animation-delay: 1s;
-
-		}
-		@keyframes imgg1{
-			0%{
-				transform: translateY(0);
-			}
-			50%{
-				transform: translateY(-22px);
-			}
-			0%{
-				transform: translateY(0);
-			}
-		}
 		.bg-color-blue {
 			background-color: #004080;
 		}
@@ -66,7 +36,6 @@
 		.login:hover {
 			text-shadow: 0px 10px 5px rgba(35, 35, 35, 0.616);
 			box-shadow: 0px 1px 5px 5px rgba(97, 97, 97, 0.37);
-			background-color: #004080;
 		}
 		.client-img:hover{
 			transform:scale(1.1);
@@ -84,16 +53,16 @@
 		<div class="container">
 			
 			<a class="navbar-brand" href="../index.html">
-				<img src="Images/Axiom_VIP_logo.png" alt="Axiom" width="100" height="55">
+				<img src="../Images/Axiom_VIP_logo.png" alt="Axiom" width="100" height="55">
 			</a>
 		
-			<button data-bs-toggle="modal" data-bs-target="#ModalLog" class=" login btn bg-color-blue ps-4 pe-4 text-white fs-5 pt-1 pb-1"
+				<button data-bs-toggle="modal" data-bs-target="#ModalLog" class="login btn ps-4 pe-4 text-white fs-5 pt-1 pb-1"
 				style="background-color: #004080; font-family: Inria Sans;" type="button">Login</button>
 		</div>
-	</nav> <br><br><br>
+	</nav> <br><br><br><br>
 
-  <!-- Modal Start Of Login form -->
-  <div class="modal fade " id="ModalLog" tabindex="-1" aria-labelledby="modallabel-log" aria-hidden="true">
+	<!-- Modal Start Of Login form -->
+<div class="modal fade " id="ModalLog" tabindex="-1" aria-labelledby="modallabel-log" aria-hidden="true">
 	<div class="modal-dialog shadow">
 	  <div class="modal-content">
 		<div class="">
@@ -104,7 +73,7 @@
 				<div class="row  text-center justify-content-center">
 					<div class="col-md-6 rounded-3 w-75">
 						<div class="img-fluid ">
-							<img style="width: 100px" src="./Images/Axiom_VIP_logo.png" alt="">
+							<img style="width: 100px" src="../Images/Axiom_VIP_logo.png" alt="">
 						</div>
 						<div>
 							<h1 class="fs-5">“Use Your Axiom VIP Account”</h1>
@@ -113,7 +82,7 @@
 								<form class="" >
 									<h4 class="mt-5">Log In</h4>
 									<div class="d-flex shadow-sm mt-5">
-									  <img src="./Images/user.png" class="img img-fluid p-2 border border-2 border-end-0" alt="" >
+									  <img src="../Images/user.png" class="img img-fluid p-2 border border-2 border-end-0" alt="" >
 										<div class="d-flex pt-1" style="height: 2.4rem;">
 											<div class="vr"></div>
 										  </div>
@@ -121,7 +90,7 @@
 										  <span id="error1"></span>
 									</div> 
 									<div class="d-flex mt-5 shadow-sm">
-											<img src="./Images/password.png" class="img img-fluid p-2 border border-2 border-end-0" alt="" >
+											<img src="../Images/password.png" class="img img-fluid p-2 border border-2 border-end-0" alt="" >
 										<div class="d-flex pt-1" style="height: 2.4rem;">
 											<div class="vr"></div>
 										  </div>
@@ -137,7 +106,7 @@
 										</div>
 									</div>
 								<div class="d-flex flex-column justify-content-center">
-									<a href="./Home Page/home.html"> <button type="button"  class=" btn text-white mx-auto my-3" style=" background-color: #004080;">Log In</button></a>
+									<a href="../Home Page/home.html"> <button type="button"  class=" btn text-white mx-auto my-3" style=" background-color: #004080;">Log In</button></a>
 								</div>
 								<div class="card-footer mt-2">
 									No Account Yet? <span style="cursor: pointer; color: #004080; text-decoration: underline;" data-bs-toggle="modal" data-bs-target="#ModalReg">Register Now</span>
@@ -382,7 +351,7 @@
 			<div class="row text-center justify-content-center">
 				<div class="col-md-6 ">
 						<div>
-						<img  src="./Images/registration successfull.gif"  class="img-fluid w-75" alt=""><br>
+						<img  src="../Images/registration successfull.gif"  class="img-fluid w-75" alt=""><br>
             <span class="h1 text-center text-dark">Thank You</span>
 					</div>
 					<div>
@@ -396,7 +365,7 @@
 			
 								</div> 
 							<div class="d-flex flex-column justify-content-center">
-								<a href="./TechnologyTables/technology.html">
+								<a href="../TechnologyTables/technology.html">
 								<button type="button" class="btn text-white mx-auto my-4" style=" background-color:#004080;">Let's Explore More</button>
 							</a>
 							</div>
@@ -420,9 +389,9 @@
 		</div>
 		<div class="modal-body container-fluid">
       <div class="row ">
-        <img class="col-4 img img-fluid " src="./Images/leftside.png" alt="">
-        <img class="col-4 img img-fluid " src="./Images/Axiom_VIP_logo.png" alt="">
-        <img class="col-4 img img-fluid " src="./Images/rightside.png" alt="">
+        <img class="col-4 img img-fluid " src="../Images/leftside.png" alt="">
+        <img class="col-4 img img-fluid " src="../Images/Axiom_VIP_logo.png" alt="">
+        <img class="col-4 img img-fluid " src="../Images/rightside.png" alt="">
       </div>
 				<div class="row  text-center justify-content-center">
 					<div class="col-auto rounded-3 w-75 ">
@@ -465,9 +434,9 @@
 		</div>
 		<div class="modal-body container-fluid">
       <div class="row ">
-        <img class="col-4 img img-fluid " src="./Images/leftside.png" alt="">
-        <img class="col-4 img img-fluid " src="./Images/Axiom_VIP_logo.png" alt="">
-        <img class="col-4 img img-fluid " src="./Images/rightside.png" alt="">
+        <img class="col-4 img img-fluid " src="../Images/leftside.png" alt="">
+        <img class="col-4 img img-fluid " src="../Images/Axiom_VIP_logo.png" alt="">
+        <img class="col-4 img img-fluid " src="../Images/rightside.png" alt="">
       </div>
 				<div class="row  text-center justify-content-center">
 					<div class="col-auto rounded-3 w-75 ">
@@ -497,170 +466,65 @@
   </div>
 <!-- Model end of send request -->
 
-
-
-	<div class="pb-5" style=" background: linear-gradient(180deg, rgba(118, 157, 255, 0.83) 0%, rgba(217, 217, 217, 0) 100%)">
-		<div class="container">
-			<div class="row">
-				<div class="col-12 col-md-6 col-sm-12 mt-5">
-					<div class="fs-1 fw-bold mt-5" style="font-family: 'Roboto Slab', serif;">Welcome To</div><br>
-					<div class="h1 fw-bold display-1 " style="font-family: 'Roboto Slab', serif;">
-						Axiom VIP
-					</div>
-					<br>
-					<div class="h2 color-blue">“IT Solutions, By IT Masters“</div><br>
-					<div class="fs-3 fw-bold">Become A Member
-						<button type="button"
-								class="login text-white px-3 responsive rounded py-1 fw-bold fs-5 bg-color-blue" data-bs-toggle="modal" data-bs-target="#ModalReg" style=" font-family: Inria Sans;">Join
-								Us</button>
-					</div>
-				</div>
-
-				<div class="vector col-12 col-md-6 col-sm-12 mt-5 "
-					style="background: url(Images/Vector.png); background-repeat: no-repeat; background-position:center; background-size: contain;">
-					
-					<div class="row justify-content-end">
-						<div class="vector1 col-6 col-md-6 col-sm-6 ms-5">
-							<a href="https://www.youtube.com/@SushilPudkeAxiom/streams" class="ms-5 ">
-								<img src="./Images/youtube.png" class="img img-fluid "
-									width="60%">
-							</a>
-						</div>
-					</div>
-					<div class="row justify-content-evenly mt-5">
-						<div class="vector1 col col-6 col-sm-6 mt-5 ">
-							<a href="#" class=" ">
-								<img src="./Images/meet.png" class="img img-fluid "
-									width="60%">
-							</a>
-						</div>
-						<div class="vector1 col-6 col-md-6 col-sm-6 mt-5">
-							<a href="#" class="ms-5 ">
-								<img src="./Images/team.png" class="img img-fluid "
-									width="60%">
-							</a>
-						</div>
-
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-
-	<!-- benifits  -->
-
-	<div class="container-fluid">
-		<div class="row   align-items-center justify-content-center "style="background-image: linear-gradient(to right,rgba(238, 238, 238, 0.5),rgba(211, 211, 241, 0.5), rgba(121, 148, 216, 0.701))">
-			<div class="col-md-6 col-sm-12 col-12 " >
-				<img src="./Images/landing_page-removebg-preview.png"class="img img-fluid w-75 d-block mx-auto pb-2">
-			</div>
-			<div class=" col-md-6 col-sm-12 col-12 h-100 m-sm-5 mx-sm-auto" >
-				
-				<p class="fw-bolder  fs-1  ps-2" style="color: #241B85; text-shadow: 4px 4px 4px rgba(6, 76, 255, 0.25);font-family: Inknut Antiqua;">BENIFITS OF AXIOM VIP</p>
-				<ul class=" text-dark h2  pb-5">
-					<li>Tech Guidance By 25 Year's <br>Experience Industrial Expert </li>
-					<li>Get Opportunity To Work On <br>Live Project</li>
-					<li>Placement Assessment</li>
-					<li>Virtual Intership</li>
-				</ul>
-			</div>
-		</div>
-	</div>
-
-	<!-- communication -->
-	<div class="container mt-5 mb-5">
-		<img src="./Images/communication.jpg" class="img-fluid w-100" alt="...">
-	</div>
-
-
-
-
 	<!-- technology -->
 
-	<div style="background-color: #eef1f7" class="mt-5">
+	<div style="background-color: #EEF1F7; ">
 		<div class="container mb-5">
-		  <h2 class="mt-5 text-center pt-5">A BROAD SECTION OF TECHNOLOGY</h2>
-		  <div class="d-flex justify-content-center">
-			<hr class="w-25" />
-			<p class="fs-5 px-1 fw-bold text-center">Trending Technology</p>
-			<hr class="w-25" />
-		  </div>
-		  <div class="row mt-5" style="z-index: -1">
-			<div class="col-md-12 mb-5">
-			  <div class="owl-carousel owl-theme " id="clients-carousel">
-          <div class="item box"><img alt="client logo" class="client-img w-75 p-2"
-              src="./Images/Cprogm.png"></div>
-          <div class="item box"><img alt="client logo" class="client-img w-75 p-2"
-              src="./Images/CPP.png"></div>
-          <div class="item box"><img alt="client logo" class="client-img w-75 p-2"
-              src="./Images/HTML1.png"></div>
-          <div class="item box"><img alt="client logo" class="client-img w-75 p-2"
-              src="./Images/CSS1.png"></div>
-          <div class="item box"><img alt="client logo" class="client-img w-75 p-2"
-              src="./Images/bootstrap1.png"></div>
-          <div class="item box"><img alt="client logo" class="client-img w-75 p-2"
-              src="./Images/js1.png"></div>
-          <div class="item box"><img alt="client logo" class="client-img w-75 p-2"
-              src="./Images/jquery1.png"></div>
-          <div class="item box"><img alt="client logo" class="client-img w-75 p-2"
-              src="./Images/laravel.png"></div>
-          <div class="item box"><img alt="client logo" class="client-img w-75 p-2"
-              src="./Images/php1.png"></div>
-          <div class="item box"><img alt="client logo" class="client-img w-75 p-2"
-              src="./Images/python.png"></div>
-          <div class="item box"><img alt="client logo" class="client-img w-75 p-2"
-              src="./Images/java.png"></div>
-          <div class="item box"><img alt="client logo" class="client-img w-75 p-2"
-              src="./Images/ajax1.png"></div>
-          <div class="item box"><img alt="client logo" class="client-img w-75 p-2"
-              src="./Images/angular.png"></div>
-          <div class="item box"><img alt="client logo" class="client-img w-75 p-2"
-              src="./Images/tailwind css.png"></div>
-          <div class="item box"><img alt="client logo" class="client-img w-75 p-2"
-              src="./Images/react_js.png"></div>
-          <div class="item box"><img alt="client logo" class="client-img w-75 p-2"
-              src="./Images/react_native.png"></div>
-          <div class="item box"><img alt="client logo" class="client-img w-75 p-2"
-              src="./Images/flutter.png"></div>
-          <div class="item box"><img alt="client logo" class="client-img w-75 p-2"
-              src="./Images/mean stack.png"></div>
-          <div class="item box"><img alt="client logo" class="client-img w-75 p-2"
-              src="./Images/mernstack.png"></div>
-          <div class="item box"><img alt="client logo" class="client-img w-75 p-2"
-              src="./Images/github.png"></div>
-          <div class="item box"><img alt="client logo" class="client-img w-75 p-2"
-              src="./Images/django.png"></div>
-        </div>
-			</div>
-		  </div>
-		</div>
-	  </div>
-
-
-
-	<!-- certificate -->
-	<div class="row w-100 gx-0 gy-0 pt-2 pb-2" style="background-color: #E6EDFB;">
-		<div class="col-lg-6 col-md-6 col-sm-12 col-12 ps-5 mt-5 pt-5">
-			<div class="fw-bolder ms-2 mb-5 h1 display-2"
-				style="color: #241B85; text-shadow: -5px 5px 10px rgba(0, 0, 0, 0.25); font-family: Libre Caslon Text; ">
-				Certificate Builder</div>
-			<p class="fw-bold ms-2 fs-5" style="font-family: Inria Sans;">Motivate your learners with a point-based
-				system.
-				<br>Award them for their achievements with a custom certificate displaying their skill.
-			</p>
-		</div>
-		<div class=" col-lg-6 col-md-6 col-sm-12 col-12">
-			<div class="certificate-container">
-				<img src="./Images/certificate.png"
-					class="certificate img-fluid float-end w-75">
-	
+			<h2 class="mt-5 text-center fw-bold pt-5 display-5" style="font-family: Inria Sans;">Axiom Internship Program Detail Sheet </h2>
+			<div class="row mt-5 " style="z-index: -1;">
+				<div class="col-md-12 mb-5 ">
+					<div class="owl-carousel owl-theme " id="clients-carousel">
+						<a href="./CLangtablenormally.html">
+						<div class="item box"><img class="client-img w-75 p-2"
+								src="./Img/Cprogm.png"></div></a>
+						<a href="./CPPtable.html"><div class="item box"><img class="client-img w-75 p-2"
+								src="./Img/CPP.png"></div></a>
+						<a href="./HTMLtable.html"><div class="item box"><img class="client-img w-75 p-2"
+								src="./Img/HTML1.png"></div></a>
+						<a href="./CSStable.html"><div class="item box"><img class="client-img w-75 p-2"
+								src="./Img/CSS1.png"></div></a>
+						<a href="./Bootstrap.html"><div class="item box"><img class="client-img w-75 p-2"
+								src="./Img/bootstrap1.png"></div></a>
+								<a href="#"><div class="item box"><img class="client-img w-75 p-2"
+								src="./Img/java.png"></div></a>
+						<a href="./JAvascript.html"><div class="item box"><img class="client-img w-75 p-2"
+								src="./Img/js1.png"></div></a>
+						<a href="./JQuery.html"><div class="item box"><img class="client-img w-75 p-2"
+								src="./Img/jquery1.png"></div></a>
+						<a href="./Laravel.html"><div class="item box"><img class="client-img w-75 p-2"
+								src="./Img/laravel.png"></div></a>
+								<a href="./PHPtable.html"><div class="item box"><img class="client-img w-75 p-2"
+								src="./Img/php1.png"></div></a>
+								<a href="./Python.html"><div class="item box"><img class="client-img w-75 p-2"
+								src="./Img/python.png"></div></a>
+								<a href="#"><div class="item box"><img class="client-img w-75 p-2"
+								src="./Img/ajax1.png"></div></a>
+								<a href="./Angular.html"><div class="item box"><img class="client-img w-75 p-2"
+								src="./Img/angular.png"></div></a>
+								<a href="./Tailwind.html"><div class="item box"><img class="client-img w-75 p-2"
+								src="./Img/tailwind css.png"></div></a>
+								<a href="#"><div class="item box"><img class="client-img w-75 p-2"
+								src="./Img/react_js.png"></div></a>
+								<a href="./ReactNAtivetable.html"><div class="item box"><img class="client-img w-75 p-2"
+								src="./Img/react_native.png"></div></a>
+								<a href="./Flutter.html"><div class="item box"><img class="client-img w-75 p-2"
+								src="./Img/flutter.png"></div></a>
+								<a href="./Meantable.html"><div class="item box"><img class="client-img w-75 p-2"
+								src="./Img/mean stack.png"></div></a>
+								<a href="./Merntable.html"><div class="item box"><img class="client-img w-75 p-2"
+								src="./Img/mernstack.png"></div></a>
+								<a href="./Github.html"><div class="item box"><img class="client-img w-75 p-2"
+								src="./Img/github.png"></div></a> 
+								<a href="./Django.html"><div class="item box"><img class="client-img w-75 p-2"
+								src="./Img/django.png"></div></a>
+								<a href="./Figma.html"><div class="item box"><img class="client-img w-75 p-2"
+								src="./Img/figma.png"></div></a>
+                               
+					</div>
+				</div>
+                
 			</div>
 		</div>
-	</div>
-  <hr class="border border-dark border-2 opacity-50">
-
-	<div class="container-fluid m-0 p-0">
-		<img src="./Images/axiom_director.png" alt="" class="img img-fluid mx-auto w-100 d-block">
 	</div>
 
 	<!-- chat box html  -->
@@ -697,10 +561,10 @@
   </div>
   <!-- end of chat box html  -->
   <!-- @endsection  Footer Area -->
-	<div class=" w-100 "
+	<div class="w-100 position-fixed bottom-0"
 		style="background-color: #004080; text-align: center;height: 40px;padding-top: 8px; position: static;">
 		<p>
-			<a href="https://www.axiomtechguru.com" style="text-decoration:none; color: #ffff;">Developed by Axiom TechGuru Pvt. Ltd.</a>
+			<a href="#" style="text-decoration:none; color: #ffff;">Developed by Axiom TechGuru Pvt. Ltd.</a>
 		</p>
 	</div>
 
@@ -717,16 +581,6 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js">
 	</script>
 	<script>
-		function showNewImage() {
-			document.querySelector('.new-certificate').style.display = 'block';
-			$(".certificate").css('opacity', '0.4');
-
-		}
-
-		function hideNewImage() {
-			document.querySelector('.new-certificate').style.display = 'none';
-			$(".certificate").css('opacity', '1');
-		}
 
 
 
@@ -736,16 +590,16 @@
 			margin: 15,
 			dots: false,
 			slideTransition: 'linear',
-			autoplayTimeout: 2000,
+			autoplayTimeout: 1500,
 			autoplayHoverPause: true,
-			autoplaySpeed: 2000,
+			autoplaySpeed: 1500,
 			responsiveClass: true,
 			responsive: {
 				0: {
 					items: 2
 				},
 				500: {
-					items: 1
+					items: 2
 				},
 				600: {
 					items: 2
@@ -759,28 +613,10 @@
 
 			}
 		});
+
+       
+
 	</script>
-	
-	<!-- Disable right-click -->
-	<!-- <script>
-document.addEventListener('contextmenu', (e) => e.preventDefault());
-
-function ctrlShiftKey(e, keyCode) {
-  return e.ctrlKey && e.shiftKey && e.keyCode === keyCode.charCodeAt(0);
-}
-
-document.onkeydown = (e) => {
-  // Disable F12, Ctrl + Shift + I, Ctrl + Shift + J, Ctrl + U
-  if (
-    event.keyCode === 123 ||
-    ctrlShiftKey(e, 'I') ||
-    ctrlShiftKey(e, 'J') ||
-    ctrlShiftKey(e, 'C') ||
-    (e.ctrlKey && e.keyCode === 'U'.charCodeAt(0))
-  )
-    return false;
-};
-	</script> -->
 	<!-- Chatbox CSS Start -->
     <style>
 		@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
@@ -793,8 +629,8 @@ document.onkeydown = (e) => {
   }
   .chatbot-toggler {
 	  position: fixed;
-	  right: 20px;
-	  bottom: 20px;
+	  right: 10px;
+	  bottom: 50px;
 	  height: 50px;
 	  width: 50px;
 	  color: white;
@@ -824,7 +660,7 @@ document.onkeydown = (e) => {
   .chatbot{
 	  position: fixed;
 	  right: 40px;
-	  bottom: 70px;
+	  bottom: 100px;
 	  width: 300px; /* width of chatbot */
 	  transform: scale(0.5);
 	  opacity: 0;

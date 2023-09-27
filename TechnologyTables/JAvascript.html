@@ -4,7 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Axiom VIP</title>
-    <link rel="icon" href="..//../Images/Axiom_VIP_logo.png" />
+    <link rel="icon" href="../Images/guru.png"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -66,34 +67,433 @@
       <div class="container">
         <a class="navbar-brand" href="../index.html">
           <img
-            src="../Images/Axiom_VIP_logo.png"
+            src="./Img/Axiom_VIP_logo.png"
             alt="Axiom"
             width="100"
             height="55"
           />
         </a>
 
-        <a href="./Landing Page/Login.html">
-          <button
+          <button data-bs-toggle="modal" data-bs-target="#ModalLog"
             class="login btn ps-4 pe-4 text-white fs-5 pt-1 pb-1"
             style="background-color: #004080; font-family: Inria Sans"
             type="submit"
           >
             Login
           </button>
-        </a>
       </div>
     </nav>
+
+    <!-- Modal Start Of Login form -->
+<div class="modal fade " id="ModalLog" tabindex="-1" aria-labelledby="modallabel-log" aria-hidden="true">
+	<div class="modal-dialog shadow">
+	  <div class="modal-content">
+		<div class="">
+		  <h1 class="" id="modallabel"></h1>
+		  <button type="button" class="btn-close float-end me-2" data-bs-dismiss="modal" aria-label="Close"></button>
+		</div>
+		<div class="modal-body container py-5">
+				<div class="row  text-center justify-content-center">
+					<div class="col-md-6 rounded-3 w-75">
+						<div class="img-fluid ">
+							<img style="width: 100px" src="../Images/Axiom_VIP_logo.png" alt="">
+						</div>
+						<div>
+							<h1 class="fs-5">“Use Your Axiom VIP Account”</h1>
+								<hr class=" mt-4 text-dark">
+							<div class="card-body">
+								<form class="" >
+									<h4 class="mt-5">Log In</h4>
+									<div class="d-flex shadow-sm mt-5">
+									  <img src="../Images/user.png" class="img img-fluid p-2 border border-2 border-end-0" alt="" >
+										<div class="d-flex pt-1" style="height: 2.4rem;">
+											<div class="vr"></div>
+										  </div>
+										<input type="text" id="username" name="username" class="form-control py-2 border border-2 border-start-0 rounded-0" placeholder="someone@gmail.com" required>
+										  <span id="error1"></span>
+									</div> 
+									<div class="d-flex mt-5 shadow-sm">
+											<img src="../Images/password.png" class="img img-fluid p-2 border border-2 border-end-0" alt="" >
+										<div class="d-flex pt-1" style="height: 2.4rem;">
+											<div class="vr"></div>
+										  </div>
+										<input type="password" id="pass" name="Password" class="form-control py-2 border border-2 border-start-0 rounded-0" placeholder="Enter Password" required>
+									</div> 
+									<div class="d-flex justify-content-between mt-3">
+										<div class="mb-3 form-check">
+											<input type="checkbox" class="form-check-input" id="rememberMe" name="rememberMe">
+											<label class="form-check-label" for="rememberMe">Remember Me</label>
+										</div>
+										<div >
+											<a data-bs-toggle="modal" data-bs-target="#ModalReset" href="#">Forgot Password?</a>
+										</div>
+									</div>
+								<div class="d-flex flex-column justify-content-center">
+									<a href="../Home Page/home.html"> <button type="button"  class=" btn text-white mx-auto my-3" style=" background-color: #004080;">Log In</button></a>
+								</div>
+								<div class="card-footer mt-2">
+									No Account Yet? <span style="cursor: pointer; color: #004080; text-decoration: underline;" data-bs-toggle="modal" data-bs-target="#ModalReg">Register Now</span>
+								</div>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+		</div>
+	  </div>
+	</div>
+  </div>
+  <!-- Modal End Of Login form -->
+
+  <!-- Modal Start Of Registration form -->
+  <div class="modal fade" id="ModalReg" tabindex="-1" aria-labelledby="modallabel-reg" aria-hidden="true">
+	<div class="modal-dialog modal-xl">
+	  <div class="modal-content">
+		<div class="">
+		  <h1 class=" fs-5" id="modallabel-reg"></h1>
+		  <button type="button" class="btn-close float-end me-2" data-bs-dismiss="modal" aria-label="Close"></button>
+		</div>
+		<div class="modal-body container">
+				<div class="rounded-3">
+					<h2 class="text-center" style="color: #004080;">Registration Form</h2>
+					<form id="registrationForm" class="my-4 px-3" onsubmit="return validateForm()">
+						<!-- Personal Information Section -->
+						<h4 class="text-center text-decoration-underline my-2">Personal Information</h4>
+						<div class="row mt-4 my-3">
+							<div class="col-md-6 col-lg-6 col-sm-12">
+								<div class="form-group">
+									<label class="form-label" for="firstName">First Name</label>
+									<input type="text" class="form-control" id="firstName" placeholder="Enter your first name" >
+								</div>
+							</div>
+							<div class="col-md-6 col-lg-6 col-sm-12">
+								<div class="form-group">
+									<label class="form-label" for="lastName">Last Name</label>
+									<input type="text" class="form-control" id="lastName" placeholder="Enter your last name" >
+								</div>
+							</div>
+						</div>
+						<div class="form-group d-flex w-50 ">
+							<label class="form-label me-2">Gender</label>
+							<div class="form-check mx-auto me-2">
+								<input class="form-check-input" type="radio" name="gender" id="male" value="male" >
+								<label class="form-check-label" for="male">Male</label>
+							</div>
+							<div class="form-check mx-auto me-2">
+								<input class="form-check-input" type="radio" name="gender" id="female" value="female" >
+								<label class="form-check-label" for="female">Female</label>
+							</div>
+							<div class="form-check mx-auto me-2">
+								<input class="form-check-input" type="radio" name="gender" id="other" value="other" >
+								<label class="form-check-label" for="other">Other</label>
+							</div>
+						</div>
+						<div class="row my-3">
+							<div class="form-group col-md-6 col-lg-6 col-sm-12">
+								<label class="form-label" for="dob">Date of Birth</label>
+								<input type="date" class="form-control" id="dob" >
+							</div>
+							<div class="form-group col-md-6 col-lg-6 col-sm-12">
+								<label class="form-label" for="age">Age</label>
+								<input type="number" class="form-control" id="age" placeholder="Enter your age" >
+							</div>
+						</div>
+						<div class="form-group my-3">
+							<label class="form-label" for="email">Email address</label>
+							<input type="email" class="form-control" id="email" placeholder="Enter your email" >
+						</div>
+						<div class="row my-3">
+							<div class="form-group col-md-6 col-lg-6 col-sm-12">
+								<label class="form-label" for="mobile">Mobile Number</label>
+								<input type="number" class="form-control" id="mobile" placeholder="Enter your mobile number" >
+							</div>
+							<div class="form-group col-md-6 col-lg-6 col-sm-12">
+								<label class="form-label" for="home">Guardian Number</label>
+								<input type="number" class="form-control" id="home" placeholder="Enter your guardian number">
+							</div>
+						</div>
+						
+						<!-- Permanent Address -->
+						<h4 class="text-center my-3 text-decoration-underline ">Permanent Address</h4>
+						<div class="form-group">
+							<label class="form-label" for="streetPermanent">Street Address</label>
+							<input type="text" class="form-control" id="streetPermanent" placeholder="Street Address" >
+						</div>
+						<div class="row my-3">
+							<div class="col-md-6">
+								<div class="form-group">
+									<label class="form-label" for="cityPermanent">City</label>
+									<input type="text" class="form-control" id="cityPermanent" placeholder="City" >
+								</div>
+							</div>
+							<div class="col-md-6">
+								<div class="form-group">
+									<label class="form-label" for="statePermanent">State/Province</label>
+									<input type="text" class="form-control" id="statePermanent" placeholder="State/Province" >
+								</div>
+							</div>
+						</div>
+						<div class="row my-3">
+							<div class="col-md-6">
+								<div class="form-group">
+									<label class="form-label" for="pinPermanent">Pin code/Zip Code</label>
+									<input type="number" class="form-control" id="pinPermanent" placeholder="Pin code/Zip Code" >
+								</div>
+							</div>
+							<div class="col-md-6">
+								<div class="form-group">
+									<label class="form-label" for="countryPermanent">Country</label>
+									<input type="text" class="form-control" id="countryPermanent" placeholder="Country" >
+								</div>
+							</div>
+						</div>
+			
+						<!-- Local Address -->
+						<h4 class="text-center my-3 text-decoration-underline">Local Address</h4>
+						<div class="form-group">
+							<label class="form-label" for="streetLocal">Street Address</label>
+							<input type="text" class="form-control" id="streetLocal" placeholder="Street Address" >
+						</div>
+						<div class="row my-3">
+							<div class="col-md-6">
+								<div class="form-group">
+									<label class="form-label" for="cityLocal">City</label>
+									<input type="text" class="form-control" id="cityLocal" placeholder="City" >
+								</div>
+							</div>
+							<div class="col-md-6">
+								<div class="form-group">
+									<label class="form-label" for="stateLocal">State/Province</label>
+									<input type="text" class="form-control" id="stateLocal" placeholder="State/Province" >
+								</div>
+							</div>
+						</div>
+						<div class="row my-3">
+							<div class="col-md-6">
+								<div class="form-group">
+									<label class="form-label" for="pinLocal">Pin code/Zip Code</label>
+									<input type="number" class="form-control" id="pinLocal" placeholder="Pin code/Zip Code" >
+								</div>
+							</div>
+							<div class="col-md-6">
+								<div class="form-group">
+									<label class="form-label" for="countryLocal">Country</label>
+									<input type="text" class="form-control" id="countryLocal" placeholder="Country" >
+								</div>
+							</div>
+						</div>
+		
+						<!-- Education Information Section -->
+						<h4 class="text-center my-3 text-decoration-underline">Education Information</h4>
+						<div class="form-group">
+							<label class="form-label" for="education">Education</label>
+							<input type="text" class="form-control" id="education" placeholder="Enter your education" >
+						</div>
+						<div class="row my-3">
+							<div class="col-md-6">
+								<div class="form-group">
+									<label class="form-label" for="sscBoard">SSC Board</label>
+									<input type="text" class="form-control" id="sscBoard" placeholder="Enter your SSC board" >
+								</div>
+							</div>
+							<div class="col-md-6">
+								<div class="form-group">
+									<label class="form-label" for="sscYear">Passing Year (SSC)</label>
+									<input type="number" class="form-control" id="sscYear" placeholder="Enter your SSC passing year" >
+								</div>
+							</div>
+						</div>
+						<div class="row my-3">
+							<div class="col-md-6">
+								<div class="form-group">
+									<label class="form-label" for="hscBoard">HSC Board</label>
+									<input type="text" class="form-control" id="hscBoard" placeholder="Enter your HSC board" >
+								</div>
+							</div>
+							<div class="col-md-6">
+								<div class="form-group">
+									<label class="form-label" for="hscYear">Passing Year (HSC)</label>
+									<input type="number" class="form-control" id="hscYear" placeholder="Enter your HSC passing year" >
+								</div>
+							</div>
+						</div>
+						<div class="row my-3">
+						<div class="form-group col-md-6">
+							<label class="form-label" for="degree">Degree</label>
+							<input type="text" class="form-control" id="degree" placeholder="Enter your degree" >
+						</div>
+							<div class="col-md-6">
+								<div class="form-group">
+									<label class="form-label" for="degreeYear">Passing Year (Degree)</label>
+									<input type="number" class="form-control" id="degreeYear" placeholder="Enter your degree passing year" >
+								</div>
+							</div>
+						</div>
+						<div class="row my-3">
+							<div class="col-md-6">
+								<div class="form-group">
+									<label class="form-label" for="masters">Masters</label>
+									<input type="text" class="form-control" id="masters" placeholder="Enter your master's degree" >
+								</div>
+							</div>
+							<div class="col-md-6">
+								<div class="form-group">
+									<label class="form-label" for="mastersYear">Passing Year (Masters)</label>
+									<input type="number" class="form-control" id="mastersYear" placeholder="Enter your master's degree passing year" >
+								</div>
+							</div>
+							<div class="col-md-6">
+								<div class=" d-flex flex-column justify-content-start  my-3">
+									<label class="form-label" for="cv">Attach your CV</label>
+									<input type="file" class="form-control" id="cv" accept=".pdf,.doc,.docx" >
+								</div>
+							</div>
+						</div>
+						<div class="d-flex justify-content-center my-2">
+							<button type="button" data-bs-toggle="modal" data-bs-target="#ModalThank1" class="btn text-white fw-bold px-3 mx-auto" style="background-color: #004080;">Register</button>
+						</div>
+					</form>
+				</div>
+		</div>
+	  </div>
+	</div>
+  </div>
+  <!-- Modal End Of Registration form -->
+
+
+  <!-- Modal Start of Thankyou -->
+  
+  <div class="modal fade" id="ModalThank1" tabindex="-1" aria-labelledby="modallabel-thank" aria-hidden="true">
+	<div class="modal-dialog">
+	  <div class="modal-content">
+		<div class="">
+		  <h1 class="modal-title fs-5" id="ThankyouModal"></h1>
+		  <button type="button" class="btn-close float-end me-2 mt-2" data-bs-dismiss="modal" aria-label="Close"></button>
+		</div>
+		<div class="modal-body container py-3">
+			<div class="row text-center justify-content-center">
+				<div class="col-md-6 ">
+						<div>
+						<img  src="../Images/registration successfull.gif"  class="img-fluid w-75" alt=""><br>
+            <span class="h1 text-center text-dark">Thank You</span>
+					</div>
+					<div>
+							<form class="" >
+								<div class="mb-3">
+									<p class="text-start fs-5 text-dark text-center mt-5 ">
+										Registration Has Been Successful 
+									</p>
+	
+									<h5 class="text-success">Admin Will Contact You Shortly </h5>
+			
+								</div> 
+							<div class="d-flex flex-column justify-content-center">
+								<a href="../TechnologyTables/technology.html">
+								<button type="button" class="btn text-white mx-auto my-4" style=" background-color:#004080;">Let's Explore More</button>
+							</a>
+							</div>
+							</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	  </div>
+	</div>
+  </div>
+  <!-- Modal End of Thankyou -->
+
+  <!-- Modal Start of Reset -->
+  <div class="modal fade " id="ModalReset" tabindex="-1" aria-labelledby="modallabel-reset" aria-hidden="true">
+	<div class="modal-dialog shadow">
+	  <div class="modal-content">
+		<div class="">
+		  <h1 class="" id="modallabel"></h1>
+		  <button type="button" class="btn-close float-end me-2" data-bs-dismiss="modal" aria-label="Close"></button>
+		</div>
+		<div class="modal-body container-fluid">
+      <div class="row ">
+        <img class="col-4 img img-fluid " src="../Images/leftside.png" alt="">
+        <img class="col-4 img img-fluid " src="../Images/Axiom_VIP_logo.png" alt="">
+        <img class="col-4 img img-fluid " src="../Images/rightside.png" alt="">
+      </div>
+				<div class="row  text-center justify-content-center">
+					<div class="col-auto rounded-3 w-75 ">
+						
+						<div>
+							<h1 class="">Forgot Password</h1>
+							<div class="card-body">
+								<form class="" >
+									<div class="">
+										<p class="text-start text-danger">Lost your Password ? <br>
+											By clicking on send request the password sent successfully to your Register Email Address </p>
+										<input type="text" id="username" name="username" class="form-control py-2" placeholder="Email" required>
+									</div> 
+								<div class="d-flex flex-column justify-content-center">
+									
+									<button type="button" data-bs-toggle="modal" data-bs-target="#ModalSend" class=" btn text-white mx-auto my-4" style=" background-color: #004080;">Send Request</button>
+									
+									<button data-bs-toggle="modal" data-bs-target="#ModalLog" type="button" class="btn mx-auto mb-4" style="color: #004080; border: 1px solid #004080;">Back to Login</button>
+								
+								</div>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+		</div>
+	  </div>
+	</div>
+  </div>
+  <!-- Modal End of Reset -->
+
+  <!-- Model start of send request -->
+
+  <div class="modal fade " id="ModalSend" tabindex="-1" aria-labelledby="modallabel-send" aria-hidden="true">
+	<div class="modal-dialog shadow">
+	  <div class="modal-content">
+		<div class="">
+		  <h1 class="" id="modallabel"></h1>
+		  <button type="button" class="btn-close float-end me-2" data-bs-dismiss="modal" aria-label="Close"></button>
+		</div>
+		<div class="modal-body container-fluid">
+      <div class="row ">
+        <img class="col-4 img img-fluid " src="../Images/leftside.png" alt="">
+        <img class="col-4 img img-fluid " src="../Images/Axiom_VIP_logo.png" alt="">
+        <img class="col-4 img img-fluid " src="../Images/rightside.png" alt="">
+      </div>
+				<div class="row  text-center justify-content-center">
+					<div class="col-auto rounded-3 w-75 ">
+						
+						<div>
+							<hr class="text-warning my-5">
+							
+								<form class="" >
+									<div class="mb-3">
+										<p class="text-start text-success text-center mt-5 fw-bolder">
+											PASSWORD SENT SUCCESSFULLY TO YOUR <br>
+											REGISTERED  EMAIL ADDRESS 
+										</p>
+				
+									</div> 
+								<div class="d-flex flex-column justify-content-center">
+									<button data-bs-toggle="modal" data-bs-target="#ModalLog" type="button" class="btn text-white mx-auto my-5" style=" background-color:#004080;">Back to Login</button>
+								</div>
+								</form>
+							
+						</div>
+					</div>
+				</div>
+		</div>
+	  </div>
+	</div>
+  </div>
+<!-- Model end of send request -->
+
     <!-- technology -->
 
     <div style="background-color: #eef1f7" class="mt-5">
       <div class="container mb-5">
-        <h2 class="mt-5 text-center pt-5">A BROAD SECTION OF TECHNOLOGY</h2>
-        <div class="d-flex justify-content-center">
-          <hr class="w-25" />
-          <p class="fs-5 px-1 fw-bold">Trending Technology</p>
-          <hr class="w-25" />
-        </div>
+              <h2 class="mt-5 text-center fw-bold pt-5 display-5" style="font-family: Inria Sans;">Axiom Internship Program Detail Sheet </h2>
         <div class="row mt-5" style="z-index: -1">
           <div class="col-md-12 mb-5">
             <div class="owl-carousel owl-theme" id="clients-carousel">
@@ -102,7 +502,7 @@
                   <img
                     alt="client logo"
                     class="client-img w-75 p-2"
-                    src="../Images/C (1).jpg"
+                    src="./Img/Cprogm.png"
                   /></div
               ></a>
               <a href="./CPPtable.html"
@@ -110,7 +510,7 @@
                   <img
                     alt="client logo"
                     class="client-img w-75 p-2"
-                    src="../Images/CPP.png"
+                    src="./Img/CPP.png"
                   /></div
               ></a>
               <a href="./HTMLtable.html"
@@ -118,7 +518,7 @@
                   <img
                     alt="client logo"
                     class="client-img w-75 p-2"
-                    src="../Images/HTML1.png"
+                    src="./Img/HTML1.png"
                   /></div
               ></a>
               <a href="./CSStable.html"
@@ -126,7 +526,7 @@
                   <img
                     alt="client logo"
                     class="client-img w-75 p-2"
-                    src="../Images/CSS1.png"
+                    src="./Img/CSS1.png"
                   /></div
               ></a>
               <a href="./Bootstrap.html"
@@ -134,23 +534,31 @@
                   <img
                     alt="client logo"
                     class="client-img w-75 p-2"
-                    src="../Images/bootstrap1.png"
+                    src="./Img/bootstrap1.png"
                   /></div
               ></a>
-              <a href="#"
+              <a href="./Java.html"
                 ><div class="item box">
                   <img
                     alt="client logo"
                     class="client-img w-75 p-2"
-                    src="../Images/js1.png"
+                    src="./Img/java.png"
                   /></div
               ></a>
+              <a href="./JAvascript.html"
+                ><div class="item box">
+                  <img
+                  alt="client logo"
+                  class="client-img w-75 p-2"
+                  src="./Img/js1.png"
+                  /></div
+                  ></a>
               <a href="./JQuery.html"
                 ><div class="item box">
                   <img
                     alt="client logo"
                     class="client-img w-75 p-2"
-                    src="../Images/jquery1.png"
+                    src="./Img/jquery1.png"
                   /></div
               ></a>
               <a href="./Laravel.html"
@@ -158,7 +566,7 @@
                   <img
                     alt="client logo"
                     class="client-img w-75 p-2"
-                    src="../Images/laravel.png"
+                    src="./Img/laravel.png"
                   /></div
               ></a>
               <a href="./PHPtable.html"
@@ -166,7 +574,7 @@
                   <img
                     alt="client logo"
                     class="client-img w-75 p-2"
-                    src="../Images/php1.png"
+                    src="./Img/php1.png"
                   /></div
               ></a>
               <a href="./Python.html"
@@ -174,23 +582,15 @@
                   <img
                     alt="client logo"
                     class="client-img w-75 p-2"
-                    src="../Images/python.png"
+                    src="./Img/python.png"
                   /></div
               ></a>
-              <a href=""
+              <a href="./Ajax.html"
                 ><div class="item box">
                   <img
                     alt="client logo"
                     class="client-img w-75 p-2"
-                    src="../Images/java.png"
-                  /></div
-              ></a>
-              <a href=""
-                ><div class="item box">
-                  <img
-                    alt="client logo"
-                    class="client-img w-75 p-2"
-                    src="../Images/ajax1.png"
+                    src="./Img/ajax1.png"
                   /></div
               ></a>
               <a href="./Angular.html"
@@ -198,7 +598,7 @@
                   <img
                     alt="client logo"
                     class="client-img w-75 p-2"
-                    src="../Images/angular.png"
+                    src="./Img/angular.png"
                   /></div
               ></a>
               <a href="./Tailwind.html"
@@ -206,7 +606,15 @@
                   <img
                     alt="client logo"
                     class="client-img w-75 p-2"
-                    src="../Images/tailwind css.png"
+                    src="./Img/tailwind css.png"
+                  /></div
+              ></a>
+              <a href="./ReactJS.html"
+                ><div class="item box">
+                  <img
+                    alt="client logo"
+                    class="client-img w-75 p-2"
+                    src="./Img/react_js.png"
                   /></div
               ></a>
               <a href="./ReactNAtivetable.html"
@@ -214,7 +622,7 @@
                   <img
                     alt="client logo"
                     class="client-img w-75 p-2"
-                    src="../Images/react netive.png"
+                    src="./Img/react_native.png"
                   /></div
               ></a>
               <a href="./Flutter.html"
@@ -222,7 +630,7 @@
                   <img
                     alt="client logo"
                     class="client-img w-75 p-2"
-                    src="../Images/flutter.png"
+                    src="./Img/flutter.png"
                   /></div
               ></a>
               <a href="./Meantable.html"
@@ -230,7 +638,7 @@
                   <img
                     alt="client logo"
                     class="client-img w-75 p-2"
-                    src="../Images/mean stack.png"
+                    src="./Img/mean stack.png"
                   /></div
               ></a>
               <a href="./Merntable.html"
@@ -238,7 +646,7 @@
                   <img
                     alt="client logo"
                     class="client-img w-75 p-2"
-                    src="../Images/mernstack.png"
+                    src="./Img/mernstack.png"
                   /></div
               ></a>
               <a href="./Github.html"
@@ -246,7 +654,7 @@
                   <img
                     alt="client logo"
                     class="client-img w-75 p-2"
-                    src="../Images/github.png"
+                    src="./Img/github.png"
                   /></div
               ></a>
               <a href="./Django.html"
@@ -254,7 +662,7 @@
                   <img
                     alt="client logo"
                     class="client-img w-75 p-2"
-                    src="../Images/django.png"
+                    src="./Img/django.png"
                   /></div
               ></a>
             </div>
@@ -264,13 +672,13 @@
     </div>
 
     <div
-      class="col-auto container col-md-auto col-sm-auto ms-sm-auto col-lg-12 px-md-4 py-3"
+      class="col-auto container col-md-auto col-sm-auto ms-sm-auto col-lg-12 px-md-4"
     >
       <div class="my-5">
         <div class="container">
-            <h4 class="w-100 text-center  text-white p-3" style="background-color: #004080;">JavaScript Topics</h4>
+            <h4 class="w-100 text-center  text-white p-3" style="background-color: #004080;">JAVASCRIPT</h4>
             <table class="table table-bordered table-hover border-dark w-100">
-                <thead class="bg-dark text-white">
+                <thead class="bg-light text-dark">
                     <tr>
                         <th>Sr.</th>
                         <th>Topic Name</th>
@@ -335,6 +743,46 @@
         </div>
       </div>
     </div>
+    <!-- chat box html  -->
+<div class="container" >
+  <div class="row">
+      <div class="col-12" style="z-index: 1;">
+          <button class="chatbot-toggler">
+              <!-- <span class="material-symbols-outlined">mode_comment</span> -->
+              <iconify-icon class="material-symbols-outlined"
+                  icon="ph:chats-teardrop-bold"></iconify-icon>
+              <span class="material-symbols-outlined"></span>
+          </button>
+          <div class="chatbot">
+              <header>
+                  <h2>Chatbot</h2>
+                  <span
+                      class="close-btn material-symbols-outlined">close</span>
+              </header>
+              <ul class="chatbox">
+                  <li class="chat incoming">
+                      <span class="material-symbols-outlined">smart_toy</span>
+                      <p>Hi There &#128075; <br> how can i help you</p>
+                  </li>
+              </ul>
+              <div class="chat-input">
+                  <textarea placeholder="Enter a message..."
+                      required></textarea>
+                  <span id="send-btn"
+                      class="material-symbols-outlined">send</span>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+<!-- end of chat box html  -->
+<!-- @endsection  Footer Area -->
+    <div class="w-100"
+		style="background-color: #004080; text-align: center;height: 40px;padding-top: 8px; position: static;">
+		<p>
+			<a href="#" style="text-decoration:none; color: #ffff;">Developed by Axiom TechGuru Pvt. Ltd.</a>
+		</p>
+	</div>
 
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
@@ -384,5 +832,249 @@
         },
       });
     </script>
+    <!-- Chatbox CSS Start -->
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins",sans-serif;
+}
+.chatbot-toggler {
+    position: fixed;
+    right: 10px;
+    bottom: 50px;
+    height: 50px;
+    width: 50px;
+    color: white;
+    background-color: #004080;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    outline: none;
+    cursor: pointer;  
+    border-radius: 50%;
+    transition: all 0.1s ease;
+}
+/* .show-chatbot .chatbot-toggler{
+    transform: rotate(90deg);
+}   icon move to 90deg */
+.chatbot-toggler span {
+   position: absolute;
+}
+.show-chatbot .chatbot-toggler span:first-child,
+.chatbot-toggler span:last-child{
+    opacity: 0;
+} 
+.show-chatbot .chatbot-toggler span:last-child {
+    opacity: 1;
+}
+.chatbot{
+    position: fixed;
+    right: 40px;
+    bottom: 100px;
+    width: 300px; /* width of chatbot */
+    transform: scale(0.5);
+    opacity: 0;
+    pointer-events: none;/* imp */
+    overflow: hidden;
+    background: #fff;
+    border-radius: 15px;
+    transform-origin: bottom right;
+    box-shadow: 0 0 128px 0 rgba(0,0,0,0.1),
+                0 32px 64px -48px rgba(0,0,0,0.5);
+    transition: all 0.1s ease;
+}
+.show-chatbot .chatbot {
+    transform: scale(1);
+    opacity: 1;
+    pointer-events: auto;
+}
+.chatbot header{
+   background: #004080;
+   padding: 16px 0;
+   text-align: center;
+   position: relative;
+}
+.chatbot header h2{
+    color: #fff;
+    font-size: 1.4rem;
+}
+.chatbot header span{
+    position: absolute;
+    right: 20px;      
+    top: 30px;
+    color: #fff;
+    cursor: pointer;
+    display: none;
+    transform: translateY(-50%);
+}
+.chatbot .chatbox{
+    height: 300px; /*hight of chatbox*/
+    overflow-x: auto;
+    padding: 30px 20px 100px;
+}
+.chatbox .chat {
+    display: flex;
+}
+.chatbox .incoming span {
+    height: 32px;
+    width: 32px;
+    color: #fff;
+    align-self: center;
+    background: #004080;
+    text-align: center;
+    line-height: 30px;
+    border-radius: 4px;
+    margin: 0 10px 7px 0;
+}
+.chatbox .outgoing {
+    /* margin: 20px 0; */
+    justify-content: flex-end;
+}
+.chatbox .chat p{
+    color: #fff;
+    max-width: 75%;
+    white-space: pre-wrap;
+    font-size: 0.95rem;
+    padding: 12px 16px;
+    border-radius: 10px 10px 0 10px;
+    background: #004080;
+}
+.chatbox .chat p.error {
+    color: #721c24;
+    background: #f8d7da;
+}
+.chatbox .incoming p{
+    color: #000;
+    background: #f2f2f2;
+    border-radius: 10px 10px 10px 0;
+}
+.chatbot .chat-input{
+    position:absolute;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    gap: 5px;
+    background: #fff;
+    padding: 5px 20px;
+    border-top: 1px solid #ccc;
+}
+.chat-input textarea {
+    height: 55px;
+    width: 100%;
+    border: none;
+    outline: none;
+    max-height: 180px;
+    font-size: 0.95rem;
+    resize:none ;
+    padding: 16px 15px 16px 0;
+}
+.chat-input span {
+    align-self: flex-end;
+    height: 55px;
+    line-height: 55px;
+    color: #004080;
+    font-size: 1.35rem;
+    cursor: pointer;
+    visibility: hidden;
+}
+.chat-input textarea:valid ~ span {
+    visibility: visible;
+}
+
+@media(max-width: 490px){
+    .chatbot{
+        right: 10px;
+        bottom: 25px;
+        width: 300px;
+        height: 350px;
+        border-radius: 10px;
+    }
+    .chatbot .chatbox{
+        height: 90%;
+    }
+    .chatbot header span{
+        display: block;
+    }
+}
+@media(max-width: 380px){
+  .chatbot{
+        right: 10px;
+        bottom: 25px;
+        width: 250px;
+        height: 290px;
+        border-radius: 10px;
+    }
+}
+    </style>
+          <!-- Chatbox CSS End -->
+
+          <!-- Chatbox Script Start -->
+          <script>
+  const chatInput = document.querySelector(".chat-input textarea");
+const sendChatBtn = document.querySelector(".chat-input span");
+const chatbox = document.querySelector(".chatbox");
+const chatbotToggler = document.querySelector(".chatbot-toggler");
+const chatbotCloseBtn = document.querySelector(".close-btn");
+
+let userMessage;
+const inputInitHeight = chatInput.scrollHeight;
+
+const createChatLi = (message,className) =>{
+    // Create a chat <li> element with passed message and className
+    const chatLi = document.createElement("li");
+    chatLi.classList.add("chat",className);
+    let chatContent = className === "outgoing" ? `<p></p>` : `<span class="material-symbols-outlined">smart_toy</span><p></p>`;
+    chatLi.innerHTML = chatContent;
+    chatLi.querySelector("p").textContent = message;
+    return chatLi;
+}
+
+const handleChat = () =>{
+    userMessage = chatInput.value.trim();
+    if(!userMessage)return;
+    chatInput.value = "";
+    chatInput.style.height = `${inputInitHeight}px`;
+
+    // Append the user's message to the chatbox
+    chatbox.appendChild(createChatLi(userMessage,"outgoing"));
+    chatbox.scrollTo(0,chatbox.scrollHeight);
+
+    setTimeout(() =>{
+        // display "thinking..." message while waiting for the response
+        const incomingChatLi = createChatLi("thinking...","incoming")
+        chatbox.appendChild(incomingChatLi);
+        chatbox.scrollTo(0,chatbox.scrollHeight);
+        generateResponse(incomingChatLi);
+    },600);
+}
+
+chatInput.addEventListener('input', () => {
+    // Adjust the height of the input textarea based on its content
+    chatInput.style.height = `${inputInitHeight}px`;
+    chatInput.style.height = `${chatInput.scrollHeight}px`; 
+});
+
+chatInput.addEventListener('keydown', (e) => {
+    // if Enter key is pressed Without shift key and the window
+    // width is greater than 800px, handle the chat
+    if(e.key === "Enter" && !e.shiftKey && window.innerWidth > 0){
+        e.preventDefault();
+        handleChat();
+    }
+  
+})
+
+sendChatBtn .addEventListener('click',handleChat);
+chatbotCloseBtn.addEventListener('click', () => document.body.classList.remove("show-chatbot"));
+chatbotToggler.addEventListener('click', () => document.body.classList.toggle("show-chatbot"));
+</script>
+          <script
+              src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+          <!-- Chatbox Script End -->
   </body>
 </html>
