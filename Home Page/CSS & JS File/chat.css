@@ -11,20 +11,25 @@ body{
 }
 .chatbot-toggler {
     position: fixed;
-    right: 40px;
-    bottom: 35px;
+    right: 10px;
+    bottom: 50px;
     height: 50px;
     width: 50px;
-    color: #fff;
+    color: white;
+    background-color: #004080;
     border: none;
     display: flex;
     align-items: center;
     justify-content: center;
     outline: none;
     cursor: pointer;
-    background: #004080;
+    
     border-radius: 50%;
     transition: all 0.1s ease;
+}
+.chatbot-toggler:hover{
+background: #004080;
+color: white;
 }
 .show-chatbot .chatbot-toggler{
     transform: rotate(90deg);
